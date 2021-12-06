@@ -4,9 +4,9 @@ from .ui.widgets.barcode_popup import BarcodePopup
 from .ui.screens import dashboard as dashb
 from .ui.screens import search_page as sp
 from .ui.screens import main_window as mw
-from core import oak_pipeline as op
-from utils import utils
-from conf import config
+from .core import oak_pipeline as op
+from .utils import utils
+from .conf import config
 from functools import partial
 import depthai as dai
 import threading

@@ -299,7 +299,8 @@ def get_bounding_rect(
 
             # Regular Bounding Box
             if regular_box:
-                cv2.rectangle(img_wrap_shadow, (x, y), (x + w, y + h), color, 2)
+                cv2.rectangle(img_wrap_shadow, (x, y),
+                              (x + w, y + h), color, 2)
 
             # Rotated Bounding Rectangle
             rect = cv2.minAreaRect(cnt)
@@ -434,7 +435,8 @@ def get_contours(
             bbox = cv2.boundingRect(approx)
             if filter > 0:
                 if len(approx) == filter:
-                    final_countours.append([len(approx), area, approx, bbox, i])
+                    final_countours.append(
+                        [len(approx), area, approx, bbox, i])
             else:
                 final_countours.append([len(approx), area, approx, bbox, i])
     final_countours = sorted(final_countours, key=lambda x: x[1], reverse=True)
@@ -530,8 +532,8 @@ def relative_to_abs_path(relative_path):
         Returns absolute path for the given relative path
     """
     try:
-        return str(hy.to_absolute_path(Path(relative_path)))
-        # return str(os.path.abspath("../../" + relative_path))
+        # return str(hy.to_absolute_path(Path(relative_path)))
+        return str(os.path.abspath("../../" + relative_path))
     except FileNotFoundError:
         return None
 
@@ -565,6 +567,7 @@ def warp_img(img, points, w, h, pad=20):
     matrix = cv2.getPerspectiveTransform(p1, p2)
 
     img_wrap = cv2.warpPerspective(img, matrix, (w, h))
-    img_wrap = img_wrap[pad : img_wrap.shape[0] - pad, pad : img_wrap.shape[1] - pad]
+    img_wrap = img_wrap[pad: img_wrap.shape[0] -
+                        pad, pad: img_wrap.shape[1] - pad]
 
     return img_wrap

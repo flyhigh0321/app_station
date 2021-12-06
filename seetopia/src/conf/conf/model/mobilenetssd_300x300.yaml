@@ -1,0 +1,6 @@
+driver: mobilenetssd
+label_map: ["background", "greenmat", "object"]
+blob_fpath: "resources/nn/mobilenet-ssd/mobilenet-ssd.blob"
+blob_config_fpath: "resources/nn/mobilenet-ssd/mobilenet-ssd.json"
+input_size_x: 300
+input_size_y: 300

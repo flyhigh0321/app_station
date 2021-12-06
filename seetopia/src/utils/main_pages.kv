@@ -1,0 +1,709 @@
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+#:import Factory kivy.factory.Factory
+#:import Snackbar kivymd.uix.snackbar.Snackbar
+#:import rp  utils.utils
+
+ScreenManager:
+    MainWindow:
+    SearchPage:
+    DashBoard:
+<CustomInputField>:
+    # id: dimension_text_field
+    size_hint_x: .25
+    mode: "fill"
+    fill_color: 0, 0, 0, .05
+    # size_hint: 0.25,0.06
+    radius: [5,5,0,0] #ask pat
+    pos_hint: {"center_x": .5, "center_y": .5}
+    input_filter: "float"
+    # color_mode: 'custom'
+    # helper_text_mode: "on_error"
+    line_color_focus: 0, 0, 0, 1
+# <barcodePopup@Popup>:
+<CustomSnackbar>:
+    MDIconButton:
+        pos_hint: {'center_y': .5}
+        icon: root.icon
+        opposite_colors: True
+        theme_text_color: "Custom"
+        text_color: get_color_from_hex("#FFFFFF")
+    MDLabel:
+        id: text_bar
+        size_hint_y: None
+        height: self.texture_size[1]
+        text: root.text
+        font_size: root.font_size
+        theme_text_color: 'Custom'
+        text_color: get_color_from_hex('ffffff')
+        shorten: True
+        shorten_from: 'right'
+        pos_hint: {'center_y': .5}
+        # size_hint_x:(self.width - (dp(10) * 7) ) / self.width
+    # MDFlatButton:
+    #     text: "Confirm"
+    #     theme_text_color: "Hint" #['Primary', 'Secondary', 'Hint', 'Error', 'Custom', 'ContrastParentBackground']
+    #     text_color: 0, 0, 1, 1
+    #     pos_hint: {'center_y': .5}
+    #     opacity: 1
+    # MDFlatButton:
+    #     text: "Dismiss"
+    #     theme_text_color: "Error"
+    #     text_color: 0, 0, 1, 1
+    #     pos_hint: {'center_y': .5}
+    #     opacity: 1
+        
+
+<BarcodePopup>:
+    id: barcode_popup
+    icon: 'information'
+    auto_dismiss: True
+    title: "Error"
+    title_size: '26sp'
+    size_hint: 0.3, 0.2
+    # pos_hint:{"x":0.2, "top":0.8}
+    title_align: 'center'
+    pos_hint:{"center_x":0.5, "center_y":0.5}
+    separator_color: get_color_from_hex("#008080") #728F9B
+    background: 'atlas://data/images/defaulttheme/bubble'
+    FloatLayout:
+        Label:
+            id: error_msg
+            size_hint: .9, .9
+            halign: 'left'
+            # valign: 'middle'
+            text: root.text
+            text_size: self.width, None
+            pos_hint:{"center_x":0.48, "center_y":0.8}
+            background:  get_color_from_hex("#000000")
+        
+        Label:
+            id: product_dimensions
+            size_hint: .9, .9
+            halign: 'left'
+            text_size: self.width, None
+            pos_hint:{"center_x":0.48, "center_y":0.60}
+            background:  get_color_from_hex("#FFFFFF")
+        Label:
+            id: product_weight
+            size_hint: .9, .9
+            halign: 'left'
+            text_size: self.width, None
+            pos_hint:{"center_x":0.48, "center_y":0.45}
+            background:  get_color_from_hex("#000000")
+        Label:
+            id: product_quantity
+            size_hint: .9, .9
+            halign: 'left'
+            text_size: self.width, None
+            pos_hint:{"center_x":0.48, "center_y":0.30}
+            background:  get_color_from_hex("#000000")
+        MDRectangleFlatButton:
+            text: 'Cancel'
+            on_release: app.popup_dismiss()
+            pos_hint:{"center_x":0.68, "center_y":0.10}
+            text_color: get_color_from_hex("#FFFFFF") 
+            line_color: get_color_from_hex("#FF0000") 
+            on_release: app.popup_dismiss()
+        MDRectangleFlatButton:
+            text: 'Confirm'
+            on_release: app.popup_dismiss()
+            pos_hint:{"center_x":0.88, "center_y":0.10}
+            text_color: get_color_from_hex("#FFFFFF") 
+            line_color: get_color_from_hex("#008080") 
+            on_press: app.confirm_override()
+    # Button:
+    #     text: "Close"
+    #     font_size: 14
+    #     size_hint: 0.2, 0.2
+    #     pos_hint:{"center_x":0.5, "center_y":0.5}
+    #     on_release: app.popup_dismiss()
+
+<TopToolBar@MDToolbar>:
+    # title: "SKUtopia"
+    # md_bg_color: rail.md_bg_color
+    md_bg_color: get_color_from_hex("#728F9B")
+    # left_action_items: [["menu", lambda x: app.rail_open()]]
+    size_hint_y:  None
+                     
+<Logo@Image>:
+    # id: skutopia_logo
+    source: rp.relative_to_abs_path("resources/img/SKUTOPIA_logo.png")
+    size_hint_y: None
+    height: 0.2 * self.texture_size[1]
+    # pos_hint: { "center_y":0.5}
+    padding: dp(25)  
+     
+
+
+
+<MainWindow>:
+    name: "login"
+    MDBoxLayout:
+        orientation: "vertical"
+        TopToolBar:
+            title: "SKUtopia"
+            height: "50dp" 
+            left_action_items: [["menu", lambda x: app.rail_open()]]
+        # MDToolbar:
+        #     title: "SKUtopia"
+        #     # md_bg_color: rail.md_bg_color
+        #     md_bg_color: get_color_from_hex("#728F9B")
+        #     left_action_items: [["menu", lambda x: app.rail_open()]]
+        #     size_hint_y:  None
+        #     height: "50dp"
+        
+        MDBoxLayout:
+                       
+            MDBoxLayout:
+                Image:
+                    id: vid
+                    allow_stretch: True  
+                    keep_ratio: True 
+                    # pos_hint:{"center_x": 0.5, "center_y":0.5}
+                    # pos_hint:{"x": 0}
+                MDBoxLayout:
+                    id: main_screen
+                    orientation: 'vertical'
+                    MDCard:
+                        orientation: 'vertical'  
+                        elevation: 20   
+                        padding: "8dp"
+
+                        MDCard:
+                            pos_hint:{"center_x": 0.5, "center_y":0.5}
+                            orientation: 'vertical'
+                            Widget:
+                                size_hint_y: 0.2
+                            Logo:
+                                id: skutopia_logo
+                                # source: 'C:/Users/ElakkiyaRaj/0_PoetryProjects/skutopia_aiworkstation/seetopia/resources/img/SKUTOPIA_logo.png'
+                                # size_hint_y: None
+                                # height: 0.2 * self.texture_size[1]
+                                # # pos_hint: { "center_y":0.5}
+                                # padding: dp(25)
+                                
+                            Widget:
+                                size_hint_y: 0.1
+                            
+                            MDTextField:
+                                id: username
+                                size_hint_x: .6
+                                size_hint_y: .15
+                                hint_text: "Enter your name"
+                                mode: "fill"
+                                fill_color: 0, 0, 0, .05
+                                radius: [5,5,0,0] #ask pat
+                                pos_hint: {"center_x": .5, "center_y": .5}
+                                color_mode: 'custom'
+                                # helper_text_mode: "on_error"
+                                line_color_focus: 0, 0, 0, 1
+                                on_text_validate: app.login_keydown()
+                                # on_enter: app.login_keydown()
+                                # on_focus: app.user_text()
+                                # required: True
+                                # on_touch_up: app.login_keydown()
+                                
+                                
+
+                            
+                            Widget:
+                                size_hint_y: 0.1
+                                # height: "40dp"
+
+                            MDFillRoundFlatButton:
+                                text: "Submit"
+                                font_size: 15
+                                ripple_scale: .5
+                                size_hint: (0.2,0.1)
+                                pos_hint: {"center_x":0.5}
+                                md_bg_color: get_color_from_hex("#728F9B")
+                                hint_animation: True
+                                # padding: dp(25)
+                                on_press: app.user_authenticate()
+                                on_release:
+                                #     app.root.current = "second" if passw.text == "tim" else "main"
+                                    root.manager.transition.direction = "left"   
+
+                            Widget:
+                                size_hint_y: 0.5
+                            
+                            
+                                    
+
+<SearchPage>:
+    name: "menu"
+    MDBoxLayout:
+        orientation: "vertical"
+        TopToolBar:
+            title: "SKUtopia"
+            height: "50dp" 
+            # left_action_items: [["menu", lambda x: app.rail_open()]]
+        
+        MDBoxLayout:
+            orientation: 'horizontal'
+            #Navigation rail
+            MDBoxLayout:
+                orientation: 'horizontal'
+                MDBoxLayout:                    
+                    Image:
+                        id: vid
+                        allow_stretch: True  
+                        keep_ratio: True 
+                        source: 'C:/Users/ElakkiyaRaj/0_PoetryProjects/skutopia_aiworkstation/seetopia/resources/img/SKUTOPIA_logo.png'
+                    
+                MDFloatLayout:
+                    id: main_screen
+                    
+                    # pos_hint:{"center_x": 0.5}
+                    md_bg_color: get_color_from_hex("#FFFFFF")
+                        # MDToolbar:
+                        #     md_bg_color: get_color_from_hex("#FFFFFF")
+                        
+                    MDLabel:
+                        id: userWelcomeName
+                        text: "Welcome"
+                        theme_text_color: "Primary"
+                        font_style: "H5"
+                        pos_hint:{"center_x": 0.55, "center_y": 0.9}
+                    MDFloatLayout:
+                        id: search_layout
+                        pos_hint:{"center_x": 0.5}
+                        MDLabel:
+                            text: "Find an item..."
+                            halign: "left"
+                            theme_text_color: "Primary"
+                            bold: True
+                            pos_hint:{"center_x": 0.62, "center_y": 0.82}
+                        
+                        MDIcon:
+                            icon: "progress-question"
+                            pos_hint:{"center_x": 0.55, "center_y": 0.82}
+                            # pos_hint:{"center_x": 0.55}
+
+                        MDLabel:
+                            text: "Scan barcode or search below to start the QA."
+                            halign: "left"
+                            theme_text_color: "Secondary"
+                            # valign: "top"
+                            pos_hint:{"center_x": 0.55, "center_y": 0.77}
+                            # pos_hint:{"center_x": 0.55}
+                            text_size: self.width, None
+                            # height: self.texture_size[1]
+                        MDTextField:
+                            id: search_field
+                            # icon_right: 'magnify'
+                            hint_text: 'Search icon'
+                            size_hint_x: .9
+                            hint_text: "Enter transfer ID"
+                            color_mode: 'custom'
+                            mode: "fill"
+                            fill_color: 0, 0, 0, .05
+                            radius: [5,5,0,0]
+                            # helper_text_mode: "on_error"
+                            line_color_focus: 0, 0, 0, 1
+                            pos_hint:{"center_x": 0.50, "center_y": 0.67}
+                            input_filter: "int"
+                            on_double_tap: app.search_clear_text()
+                            on_text_validate: 
+                                app.search_transfer() if root.ids.search_field.text  else "" 
+                                root.manager.transition.direction = "left" 
+                        MDIconButton:
+                            icon: 'magnify'
+                            theme_text_color: "Custom"
+                            text_color: get_color_from_hex("#728F9B")
+                            pos_hint:{"center_x": 0.9, "center_y": 0.67}
+                            user_font_size: "40sp"
+                            on_release: 
+                                app.search_transfer() if root.ids.search_field.text  else "" 
+                                root.manager.transition.direction = "left" 
+                            # Button:
+                            #     text: "Go Back"
+                            #     on_release:
+                            #         app.root.current = "login"
+                            #         root.manager.transition.direction = "right"
+
+<DashBoard>:
+    name: "dashboard"
+    MDBoxLayout:
+        orientation: "vertical"
+        TopToolBar:
+            title: "SKUtopia"
+            height: "50dp" 
+            # left_action_items: [["menu", lambda x: app.rail_open()]]
+        
+        MDBoxLayout:
+            orientation: 'horizontal'
+            #navigation rail
+            MDBoxLayout:
+                orientation: 'horizontal'
+                MDBoxLayout:                    
+                    Image:
+                        id: vid
+                        allow_stretch: True  
+                        keep_ratio: True 
+                        source: 'C:/Users/ElakkiyaRaj/0_PoetryProjects/skutopia_aiworkstation/seetopia/resources/img/SKUTOPIA_logo.png'
+                    
+                MDFloatLayout:
+                    id: main_screen
+                    
+                    # pos_hint:{"center_x": 0.5}
+                    md_bg_color: get_color_from_hex("#FFFFFF")
+                        # MDToolbar:
+                        #     md_bg_color: get_color_from_hex("#FFFFFF")
+                    MDIconButton:
+                        icon: "arrow-left-circle"
+                        theme_text_color: "Custom"
+                        text_color: get_color_from_hex("#728F9B")
+                        pos_hint:{"center_x": 0.065, "center_y": 0.95}
+                        user_font_size: "30sp"
+                        on_release: 
+                            app.root.current = "menu"
+                            app.clear_states()
+                            root.manager.transition.direction = "left" 
+                    # MDIconButton:
+                    #     id: flag_transfer
+                    #     icon: "flag-variant"
+                    #     theme_text_color: "Custom"
+                    #     text_color: get_color_from_hex("#808080")
+                    #     pos_hint:{"center_x": 0.9, "center_y": 0.95}
+                    #     user_font_size: "30sp"
+                    #     on_press:
+                    #         app.flag_transfer()
+                            # root.manager.background_color : get_color_from_hex("#FF0000")
+                            
+                    MDLabel:
+                        id: userWelcomeName
+                        text: "Welcome"
+                        theme_text_color: "Primary"
+                        font_size: '25sp'
+                        pos_hint:{"center_x": 0.9, "center_y": 0.95}
+                    MDFloatLayout:
+                        id: dashboard_layout
+                        pos_hint:{"center_x": 0.5}  
+                        MDLabel:
+                            id: scan_status
+                            text: "Scanned"
+                            halign: "left"
+                            theme_text_color: "Primary"
+                            theme_text_color: "Custom"
+                            bold: True
+                            font_size: '18sp'
+                            pos_hint:{"center_x": 0.62, "center_y": 0.85}
+                        MDIcon:
+                            id: scan_status_icon
+                            icon: "check-circle"
+                            theme_text_color: "Custom"
+                            text_color: get_color_from_hex("#808080")
+                            pos_hint:{"center_x": 0.55, "center_y": 0.85}
+                            # pos_hint:{"center_x": 0.55}      
+                        MDLabel:
+                            id: product_name
+                            text: "Product Name : Sample "
+                            halign: "left"
+                            theme_text_color: "Secondary"
+                            # valign: "top"
+                            font_size: '15sp'
+                            pos_hint:{"center_x": 0.62, "center_y": 0.80}
+                            # pos_hint:{"center_x": 0.55}
+                            text_size: self.width, None
+                            theme_text_color: "Custom"
+                            # height: self.texture_size[1]       
+
+                        MDLabel:
+                            id: product_sku
+                            text: "Product SKU  : Sample "
+                            halign: "left"
+                            theme_text_color: "Secondary"
+                            # valign: "top"
+                            font_size: '15sp'
+                            pos_hint:{"center_x": 0.62, "center_y": 0.75} #78
+                            # pos_hint:{"center_x": 0.55}
+                            text_size: self.width, None
+                            theme_text_color: "Custom"
+                            # height: self.texture_size[1] 
+                        MDLabel:
+                            id: measure_status
+                            text: "Measured (cm)"
+                            halign: "left"
+                            theme_text_color: "Primary"
+                            theme_text_color: "Custom"
+                            font_size: '18sp'
+                            text_color: get_color_from_hex("#808080")
+                            bold: True
+                            pos_hint:{"center_x": 0.62, "center_y": 0.70}#73
+                        MDIcon:
+                            id: measure_status_icon
+                            icon: "progress-question"
+                            theme_text_color: "Custom"
+                            text_color: get_color_from_hex("#808080")
+                            pos_hint:{"center_x": 0.55, "center_y": 0.70}
+                            # pos_hint:{"center_x": 0.55}         
+
+                        MDLabel:
+                            id: item_length
+                            text: "Length: "
+                            halign: "left"
+                            theme_text_color: "Secondary"
+                            # valign: "top"
+                            pos_hint:{"center_x": 0.62, "center_y": 0.65} #68
+                            # pos_hint:{"center_x": 0.55}
+                            text_size: self.width, None
+                            theme_text_color: "Custom"
+                            text_color: get_color_from_hex("#808080")
+                            opacity: 1
+                            # height: self.texture_size[1]       
+                        MDLabel:
+                            id: item_width
+                            text: "Width: "
+                            halign: "left"
+                            theme_text_color: "Secondary"
+                            # valign: "top"
+                            pos_hint:{"center_x": 0.62, "center_y": 0.60}#63
+                            # pos_hint:{"center_x": 0.55}
+                            text_size: self.width, None
+                            theme_text_color: "Custom"
+                            text_color: get_color_from_hex("#808080")
+                            opacity: 1
+                            # height: self.texture_size[1] 
+                          
+                        MDLabel:
+                            id: item_depth
+                            text: "Height: "
+                            halign: "left"
+                            theme_text_color: "Secondary"
+                            # valign: "top"
+                            pos_hint:{"center_x": 0.62, "center_y": 0.55}#58
+                            # pos_hint:{"center_x": 0.55}
+                            text_size: self.width, None
+                            theme_text_color: "Custom"
+                            text_color: get_color_from_hex("#808080")
+                            opacity: 1
+                            # height: self.texture_size[1]  
+                        StackLayout:
+                            orientation: "lr-tb"
+                            spacing:[15,15]
+                            pos_hint:{"center_x": 0.62 , "center_y": 0.12}
+                            CustomInputField:
+                                id: length_text_field
+                                # size_hint_x: .30
+                                # hint_text: " Enter Length"
+                                # mode: "fill"
+                                # fill_color: 0, 0, 0, .05
+                                # radius: [5,5,0,0] #ask pat
+                                # pos_hint: {"center_x": .5, "center_y": .5}
+                                # color_mode: 'custom'
+                                # # helper_text_mode: "on_error"
+                                # line_color_focus: 0, 0, 0, 1
+                                # text_size: self.width, None
+                                # opacity: 0
+                                hint_text: " Enter length"
+                                text_size: self.width, None
+                                error: True
+                                # on_touch_down: run a validation check
+                                
+                                
+                                
+                            CustomInputField:
+                                id: width_text_field
+                                hint_text: " Enter width"
+                                text_size: self.width, None
+                                error: True
+                                
+                                
+                                
+                            CustomInputField:
+                                id: depth_text_field
+                                #hint_text: " Enter height"
+                                text_size: self.width, None
+                                error: True
+                                readonly: False 
+                            
+                        # MDRectangleFlatIconButton:
+                        #     icon: "circle-edit-outline"
+                        #     text: "Override"
+                        #     theme_text_color: "Custom"
+                        #     text_color: get_color_from_hex("#000000") 
+                        #     line_color: get_color_from_hex("#000000") 
+                        #     icon_color: get_color_from_hex("#000000") 
+                        #     on_press: self.elevation = 8
+                        #     ripple_scale: .5
+                        #     pos_hint: {"x":0.12, "center_y":0.53}
+                        MDLabel:
+                            id: Weight_status
+                            text: "Weighed (g)"
+                            halign: "left"
+                            theme_text_color: "Primary"
+                            theme_text_color: "Custom"
+                            font_size: '18sp'
+                            text_color: get_color_from_hex("#808080")
+                            # text_color: get_color_from_hex("#FF0000")
+                            bold: True
+                            pos_hint:{"center_x": 0.62, "center_y": 0.50}#53
+                        MDIcon:
+                            id: weight_status_icon
+                            icon: "progress-question"
+                            theme_text_color: "Custom"
+                            # text_color: get_color_from_hex("#808080")
+                            text_color: get_color_from_hex("#000000")
+                            pos_hint:{"center_x": 0.55, "center_y": 0.50}
+                            opacity : 0
+                        MDSpinner:
+                            id: weight_status_spinner
+                            size_hint: None, None
+                            size: sp(18), sp(18)
+                            pos_hint:{"center_x": 0.065, "center_y": 0.50}
+                            palette:
+                                [0.28627450980392155, 0.8431372549019608, 0.596078431372549, 1],[0.3568627450980392, 0.3215686274509804, 0.8666666666666667, 1],[0.8862745098039215, 0.36470588235294116, 0.592156862745098, 1],[0.8784313725490196, 0.9058823529411765, 0.40784313725490196, 1],
+                            
+                            active: True 
+                        
+                        MDLabel:
+                            id: actual_weight
+                            text: "Actual weight  : 450g "
+                            halign: "left"
+                            theme_text_color: "Secondary"
+                            # valign: "top"
+                            font_size: '15sp'
+                            pos_hint:{"center_x": 0.62, "center_y": 0.45}#48
+                            # pos_hint:{"center_x": 0.55}
+                            text_size: self.width, None
+                            theme_text_color: "Custom"
+                            text_color: get_color_from_hex("#000000")
+                            opacity: 0
+                        MDLabel:
+                            id: exp_weight
+                            text: "Expected weight : 500g "
+                            halign: "left"
+                            theme_text_color: "Secondary"
+                            # valign: "top"
+                            font_size: '15sp'
+                            pos_hint:{"center_x": 0.62, "center_y": 0.40}#43
+                            # pos_hint:{"center_x": 0.55}
+                            text_size: self.width, None
+                            theme_text_color: "Custom"
+                            text_color: get_color_from_hex("#000000")
+                            height: self.texture_size[1]  
+                            opacity: 0
+                        
+                        CustomInputField:
+                            id: weight_text_field
+                            hint_text: "Enter measured weight"
+                            text_size: self.width, None
+                            opacity: 1
+                            size_hint_x: .24
+                            error: False   
+                            helper_text_mode:"persistent"
+                            helper_text: "Expected: 500g"
+                            pos_hint:{"x": 0.12 , "center_y": 0.44}#47
+                            required: True
+                            input_filter: "float"
+                            # on_focus: app.validate_text(self.id, weight=True)
+
+
+                        MDLabel:
+                            id: item_count
+                            text: "Item Count"
+                            halign: "left"
+                            theme_text_color: "Secondary"
+                            # valign: "top"
+                            pos_hint:{"center_x": 0.62, "center_y": 0.38}#41
+                            # pos_hint:{"center_x": 0.55}
+                            text_size: self.width, None
+                            theme_text_color: "Custom"
+                            text_color: get_color_from_hex("#808080")
+                            # text_color: get_color_from_hex("#000000")
+                            bold: True
+                            opacity: 1
+                        
+                        CustomInputField:
+                            id: count_text_field
+                            hint_text: "Enter the quantity"
+                            text_size: self.width, None
+                            opacity: 1
+                            size_hint_x: .24
+                            error: False   
+                            helper_text_mode:"persistent"
+                            helper_text: "Expected: 5"
+                            required: True
+                            pos_hint:{"x": 0.12 , "center_y": 0.32}#35
+                            input_filter: "int"
+
+                        # MDRectangleFlatButton:
+                        #     text: "Override"
+                            
+                        #     line_color: get_color_from_hex("#000000") 
+                        #     theme_text_color: "Custom"
+                        #     text_color: get_color_from_hex("#000000") 
+                        #     on_press: self.elevation = 8
+                        #     ripple_scale: .5
+                            
+                        #     pos_hint: {"x":0.12, "center_y":0.30}
+                        StackLayout:
+                            orientation: "lr-bt"
+                            spacing:[25,25]
+                            pos_hint:{"center_x": 0.62 , 'y': 0.22}#25
+                            MDRectangleFlatIconButton:
+                                id: value_override
+                                icon: "circle-edit-outline"
+                                text: "OVERRIDE"
+                                theme_text_color: "Custom"
+                                text_color: get_color_from_hex("#000000") 
+                                line_color: get_color_from_hex("#728F9B") 
+                                icon_color: get_color_from_hex("#728F9B") 
+                                on_press: self.elevation = 8
+                                line_width: 1.25
+                                ripple_scale: .5
+                                user_font_size: "5sp"
+                                on_release: app.edit_product_info() 
+                            
+                            MDRectangleFlatIconButton:
+                                id: flag_transfer
+                                icon: "flag-triangle"
+                                text: "FLAG        "
+                                theme_text_color: "Custom"
+                                text_color: get_color_from_hex("#000000")
+                                line_color: get_color_from_hex("#728F9B") 
+                                icon_color: get_color_from_hex("#728F9B") 
+                                line_width: 1.25
+                                on_press: 
+                                    self.elevation = 8
+                                    app.flag_transfer()
+                                ripple_scale: .5 
+                                
+                        
+                    
+                        
+                        
+                            
+
+                        #   
+
+                        # MDRectangleFlatButton:
+                        #     text: "Override"
+                        #     line_color: get_color_from_hex("#000000") 
+                        #     theme_text_color: "Custom"
+                        #     text_color: get_color_from_hex("#000000") 
+                        #     on_press: self.elevation = 8
+                        #     ripple_scale: .5
+                        #     # size_hint: (0.2,0.1)
+                        #     pos_hint: {"center_x":0.5}
+                        # MDRectangleFlatButton:
+                        #     text: "Override"
+                        #     theme_text_color: "Custom"
+                        #     text_color: get_color_from_hex("#FFCC00")
+                        #     line_color: get_color_from_hex("#FFCC00")
+                        #     pos_hint: {'center_x': 0.23, 'center_y': 0.5}
+                        # MDFillRoundFlatButton:
+                        #     text: "Override"
+                        #     font_size: 15
+                        #     ripple_scale: .5
+                        #     # size_hint: (0.2,0.1)
+                        #     # pos_hint: {"center_x":0.5}
+                        #     md_bg_color: get_color_from_hex("#728F9B")
+                        #     hint_animation: True
+                            
+                        
+                        
+                                
+                                
+                                

@@ -1,0 +1,12 @@
+#runtime type safety is enabled for configs with dynamic schema
+defaults:
+  - schema/model: mobilenetssd
+  - model: mobilenetssd_300x300
+  - schema/calib: oakd
+  - calib: oakd_default
+  - schema/db: qa_db
+  - db: qa
+  - schema/cv: cv_default
+  - cv: default
+
+

@@ -1,0 +1,81 @@
+#:import col   ui.config.colors
+#:import rp  utils.utils
+<SearchPage>:
+    name: "menu"
+    
+    MDBoxLayout:
+        orientation: "vertical"
+        TopToolBar:
+            title: "SKUtopia"
+            height: "50dp" 
+            # left_action_items: [["menu", lambda x: app.rail_open()]]
+        
+        MDBoxLayout:
+            orientation: 'horizontal'
+            #Navigation rail
+            MDBoxLayout:
+                orientation: 'horizontal'
+                MDBoxLayout:                    
+                    Image:
+                        id: vid
+                        allow_stretch: True  
+                        keep_ratio: True 
+                        source: rp.relative_to_abs_path("resources/img/SKUTOPIA_logo.png")   
+                    
+                MDFloatLayout:
+                    id: main_screen
+                    md_bg_color: get_color_from_hex(col['white'])
+                        
+                    MDLabel:
+                        id: userWelcomeName
+                        text: "Welcome"
+                        theme_text_color: "Primary"
+                        font_style: "H5"
+                        pos_hint:{"center_x": 0.55, "center_y": 0.9}
+                    MDFloatLayout:
+                        id: search_layout
+                        pos_hint:{"center_x": 0.5}
+                        MDLabel:
+                            text: "Find an item..."
+                            halign: "left"
+                            theme_text_color: "Primary"
+                            bold: True
+                            pos_hint:{"center_x": 0.62, "center_y": 0.82}
+                        
+                        MDIcon:
+                            icon: "progress-question"
+                            pos_hint:{"center_x": 0.55, "center_y": 0.82}
+
+                        MDLabel:
+                            text: "Scan barcode or search below to start the QA."
+                            halign: "left"
+                            theme_text_color: "Secondary"
+                            pos_hint:{"center_x": 0.55, "center_y": 0.77}
+                            text_size: self.width, None
+                        MDTextField:
+                            id: search_field
+                            hint_text: 'Search icon'
+                            size_hint_x: .9
+                            hint_text: "Enter transfer ID"
+                            color_mode: 'custom'
+                            mode: "fill"
+                            fill_color: 0, 0, 0, .05
+                            radius: [5,5,0,0]
+                            line_color_focus: 0, 0, 0, 1
+                            pos_hint:{"center_x": 0.50, "center_y": 0.67}
+                            input_filter: "int"
+                            on_double_tap: app.clear_search_text()
+                            on_text_validate: 
+                                app.search_transfer() if root.ids.search_field.text  else "" 
+                                root.manager.transition.direction = "left" 
+                        MDIconButton:
+                            icon: 'magnify'
+                            theme_text_color: "Custom"
+                            pos_hint:{"center_x": 0.9, "center_y": 0.67}
+                            user_font_size: "40sp"
+                            on_release: 
+                                app.search_transfer() if root.ids.search_field.text  else "" 
+                                root.manager.transition.direction = "left" 
+
+                        
+                        

@@ -1,0 +1,3 @@
+driver: qa_db
+img_class_fpath: "resources/classification_db/oak_images"
+fwrite_fpath: "resources/classification_db/oak_images"

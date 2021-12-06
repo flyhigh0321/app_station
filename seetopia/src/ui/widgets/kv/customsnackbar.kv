@@ -1,0 +1,21 @@
+#:import Snackbar kivymd.uix.snackbar.Snackbar
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+#:import col   ui.config.colors
+<CustomSnackbar>:
+    MDIconButton:
+        pos_hint: {'center_y': .5}
+        icon: root.icon
+        opposite_colors: True
+        theme_text_color: "Custom"
+        text_color: get_color_from_hex(col["white"])
+    MDLabel:
+        id: text_bar
+        size_hint_y: None
+        height: self.texture_size[1]
+        text: root.text
+        font_size: root.font_size
+        theme_text_color: 'Custom'
+        text_color: get_color_from_hex(col["white"])
+        shorten: True
+        shorten_from: 'right'
+        pos_hint: {'center_y': .5}

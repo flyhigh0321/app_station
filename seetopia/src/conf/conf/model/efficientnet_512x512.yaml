@@ -1,0 +1,5 @@
+# @package _group_
+driver: efficientnet
+label_map: ["background", "greenmat", "object"]
+blob_fpath: "resources/nn/efficient-netefficient-net.blob"
+blob_config_fpath: "resources/nn/efficient-net/efficient-net.json"

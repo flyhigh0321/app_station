@@ -1,0 +1,815 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="python" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Main Screen &mdash; QA App Station 0.0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Custom popup" href="src.ui.widgets.html" />
+    <link rel="prev" title="Kivy UI" href="src.ui.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> QA App Station
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="src.html">QA App Station (Kivy) package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="src.html#module-src.qa_app_demo">Kivy QAApp</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="src.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="src.utils.html">Utils</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="src.ui.html">Kivy UI</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="src.ui.html#screens">Screens</a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.ui.html#widgets">Widgets</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="src.core.html">DepthAI Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.conf.html">Hydra Configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">QA App Station</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="src.html">QA App Station (Kivy) package</a> &raquo;</li>
+        
+          <li><a href="src.ui.html">Kivy UI</a> &raquo;</li>
+        
+      <li>Main Screen</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/src.ui.screens.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-src.ui.screens.main_window">
+<span id="main-screen"></span><h1>Main Screen<a class="headerlink" href="#module-src.ui.screens.main_window" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.ui.screens.main_window.MainWindow">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">src.ui.screens.main_window.</span></span><span class="sig-name descname"><span class="pre">MainWindow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.screens.main_window.MainWindow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">kivy.uix.screenmanager.Screen</span></code></p>
+<p>This is the Class object for the <code class="docutils literal notranslate"><span class="pre">Main</span> <span class="pre">window</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Click <a class="reference external" href="https://drive.google.com/file/d/1cbIK_xqZofoy2yS_ITaUgbJq87HHzFJB/view?usp=sharing">here</a> to see <code class="docutils literal notranslate"><span class="pre">Main</span> <span class="pre">Screen</span></code> example.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Screen</strong> -- A relative layout of an empty screen associated with the
+current window.</p></li>
+<li><p><strong>popup</strong> -- An instance of <a class="reference internal" href="src.ui.widgets.html#src.ui.widgets.barcode_popup.BarcodePopup" title="src.ui.widgets.barcode_popup.BarcodePopup"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.ui.widgets.barcode_popup.BarcodePopup</span></code></a>
+to display popups in the current screen.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.screens.main_window.MainWindow.popup_dismiss">
+<span class="sig-name descname"><span class="pre">popup_dismiss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.screens.main_window.MainWindow.popup_dismiss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dismisses the current popup on the screen</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.screens.main_window.MainWindow.show_popup">
+<span class="sig-name descname"><span class="pre">show_popup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.screens.main_window.MainWindow.show_popup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Displays a poppup with the provided <code class="docutils literal notranslate"><span class="pre">content</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>content</strong> (<em>string</em>) -- Message that has to be displayed in the popup.</p></li>
+<li><p><strong>dt</strong> (<em>float</em>) -- Refers to delta-time, which is the elapsed time between the
+scheduling and the callback</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.screens.main_window.MainWindow.text_field_error_management">
+<span class="sig-name descname"><span class="pre">text_field_error_management</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'False'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_msg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.screens.main_window.MainWindow.text_field_error_management" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages the error states of the <code class="docutils literal notranslate"><span class="pre">text</span> <span class="pre">field</span></code> widget in the
+provided <code class="docutils literal notranslate"><span class="pre">widget</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>screen</strong> -- <code class="docutils literal notranslate"><span class="pre">text</span> <span class="pre">field</span></code> widget in the current screen</p></li>
+<li><p><strong>error</strong> (<em>str</em><em>, </em><em>optional</em>) -- Error state of the text field, by default &quot;False&quot;</p></li>
+<li><p><strong>error_msg</strong> (<em>str</em><em>, </em><em>optional</em>) -- The <code class="docutils literal notranslate"><span class="pre">helper</span> <span class="pre">text</span></code> that is displayed when the <code class="docutils literal notranslate"><span class="pre">error</span></code> state
+is enabled, by default &quot;&quot;</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.screens.main_window.MainWindow.user_authenticate">
+<span class="sig-name descname"><span class="pre">user_authenticate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cur_screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nxt_Screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.screens.main_window.MainWindow.user_authenticate" title="Permalink to this definition">¶</a></dt>
+<dd><p>When the <code class="docutils literal notranslate"><span class="pre">name</span></code> entered by the user matches with the <code class="docutils literal notranslate"><span class="pre">wms</span></code>
+data, navigates to next screen and enables the <code class="docutils literal notranslate"><span class="pre">session</span> <span class="pre">state</span></code>.</p>
+<p>Otherwise, it invokes  <a class="reference internal" href="#src.ui.screens.main_window.MainWindow.text_field_error_management" title="src.ui.screens.main_window.MainWindow.text_field_error_management"><code class="xref py py-func docutils literal notranslate"><span class="pre">text_field_error_management()</span></code></a>.</p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Make API call to <code class="docutils literal notranslate"><span class="pre">WMS</span></code> to validate the user information.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cur_screen</strong> -- Current screen which is the <code class="docutils literal notranslate"><span class="pre">main</span> <span class="pre">window</span></code></p></li>
+<li><p><strong>nxt_Screen</strong> (<em>[</em><em>type</em><em>]</em>) -- Success screen which is the <code class="docutils literal notranslate"><span class="pre">search</span></code> screen.</p></li>
+<li><p><strong>root</strong> -- <code class="docutils literal notranslate"><span class="pre">root</span></code> widget which has all the ids of the widgets in a
+specific window</p></li>
+<li><p><strong>session</strong> (<em>bool</em>) -- Indicates the state of the user session</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Returns if a session state is established or not</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-src.ui.screens.dashboard">
+<span id="dashboard-screen"></span><h1>Dashboard Screen<a class="headerlink" href="#module-src.ui.screens.dashboard" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.ui.screens.dashboard.DashBoard">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">src.ui.screens.dashboard.</span></span><span class="sig-name descname"><span class="pre">DashBoard</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.screens.dashboard.DashBoard" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">kivy.uix.screenmanager.Screen</span></code></p>
+<p>This is the Class object for the <code class="docutils literal notranslate"><span class="pre">Main</span> <span class="pre">window</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Click <a class="reference external" href="https://drive.google.com/file/d/1Sm18gzY0QM8JsbcNeEw9hmSzKZe8tbwM/view?usp=sharing">here</a> to see <code class="docutils literal notranslate"><span class="pre">Dash</span> <span class="pre">board</span></code> example.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Screen</strong> -- A relative layout of an empty screen associated with the
+current window.</p></li>
+<li><p><strong>popup</strong> -- An instance of <a class="reference internal" href="src.ui.widgets.html#src.ui.widgets.barcode_popup.BarcodePopup" title="src.ui.widgets.barcode_popup.BarcodePopup"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.ui.widgets.barcode_popup.BarcodePopup</span></code></a>
+to display popups in the current screen.</p></li>
+<li><p><strong>config</strong> -- <code class="docutils literal notranslate"><span class="pre">kv</span></code> configuration for kivy loaded from a <code class="docutils literal notranslate"><span class="pre">yaml</span></code> file.</p></li>
+<li><p><strong>fields</strong> (<em>dict</em>) -- <code class="docutils literal notranslate"><span class="pre">widgets</span></code> and therir label names</p></li>
+<li><p><strong>m_lables</strong> (<em>list</em>) -- list of all the <code class="docutils literal notranslate"><span class="pre">measure</span></code> widget</p></li>
+<li><p><strong>w_lables</strong> (<em>list</em>) -- list of all the <code class="docutils literal notranslate"><span class="pre">weight</span></code> widget (extended <code class="docutils literal notranslate"><span class="pre">m_labels</span></code>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.screens.dashboard.DashBoard.check_measurements">
+<span class="sig-name descname"><span class="pre">check_measurements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_qa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">master_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimension</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{'depth':</span> <span class="pre">0,</span> <span class="pre">'length':</span> <span class="pre">0,</span> <span class="pre">'width':</span> <span class="pre">0}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.screens.dashboard.DashBoard.check_measurements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validates the measured dimension with the expected value from <code class="docutils literal notranslate"><span class="pre">WMS</span></code> and
+invokes <a class="reference internal" href="#src.ui.screens.dashboard.DashBoard.show_updated_measurements" title="src.ui.screens.dashboard.DashBoard.show_updated_measurements"><code class="xref py py-func docutils literal notranslate"><span class="pre">show_updated_measurements()</span></code></a> and <a class="reference internal" href="#src.ui.screens.dashboard.DashBoard.update_labels" title="src.ui.screens.dashboard.DashBoard.update_labels"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_labels()</span></code></a> functions with
+appropriate <code class="docutils literal notranslate"><span class="pre">status</span></code> value ie. <code class="docutils literal notranslate"><span class="pre">success</span></code> or <code class="docutils literal notranslate"><span class="pre">lapse</span></code>.</p>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p><code class="docutils literal notranslate"><span class="pre">weight</span></code> to be auto populated from a digital weighing scale in the future.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">dimension</span><span class="p">[</span><span class="s2">&quot;weight&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">master_data</span><span class="p">[</span><span class="s2">&quot;weight&quot;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dimension</span><span class="p">[</span><span class="s2">&quot;item_cnt&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">master_data</span><span class="p">[</span><span class="s2">&quot;quantity&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Kivy <a class="reference external" href="https://kivy.org/doc/stable/api-kivy.clock.html">Clock</a> object is used to schedule these function calls once.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start_qa</strong> (<em>bool</em>) -- Indicates the state of QA</p></li>
+<li><p><strong>master_data</strong> (<em>dict</em>) -- Response from <code class="docutils literal notranslate"><span class="pre">WMS</span></code> for a specific <code class="docutils literal notranslate"><span class="pre">transfer</span> <span class="pre">id</span></code></p></li>
+<li><p><strong>window_size</strong> (<em>list</em>) -- Size of the current window [width, height]</p></li>
+<li><p><strong>dimension</strong> (<em>dict</em><em>, </em><em>optional</em>) -- Measured value from <a class="reference internal" href="src.core.html#src.core.oak_pipeline.OakPipeline" title="src.core.oak_pipeline.OakPipeline"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.core.oak_pipeline.OakPipeline</span></code></a> or
+override value frm user,
+by default {&quot;width&quot;: 0, &quot;length&quot;: 0, &quot;depth&quot;: 0}</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.screens.dashboard.DashBoard.confirm_override">
+<span class="sig-name descname"><span class="pre">confirm_override</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dimensions</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'success'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.screens.dashboard.DashBoard.confirm_override" title="Permalink to this definition">¶</a></dt>
+<dd><p>Displays a popup to confirm the <code class="docutils literal notranslate"><span class="pre">override</span></code> action.
+Invokes <a class="reference internal" href="#src.ui.screens.dashboard.DashBoard.show_updated_measurements" title="src.ui.screens.dashboard.DashBoard.show_updated_measurements"><code class="xref py py-func docutils literal notranslate"><span class="pre">show_updated_measurements()</span></code></a> and <a class="reference internal" href="#src.ui.screens.dashboard.DashBoard.update_labels" title="src.ui.screens.dashboard.DashBoard.update_labels"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_labels()</span></code></a> functions with
+appropriate <code class="docutils literal notranslate"><span class="pre">status</span></code> value ie. <code class="docutils literal notranslate"><span class="pre">success</span></code> or <code class="docutils literal notranslate"><span class="pre">lapse</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Kivy <a class="reference external" href="https://kivy.org/doc/stable/api-kivy.clock.html">Clock</a> object is used to schedule these function calls once.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dimensions</strong> (<em>dict</em>) -- Updated dimension values</p></li>
+<li><p><strong>window</strong> -- Size of the current window .</p></li>
+<li><p><strong>status</strong> (<em>str</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">success</span></code> or <code class="docutils literal notranslate"><span class="pre">lapse</span></code> , by default &quot;success&quot;</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.screens.dashboard.DashBoard.flag_transfer">
+<span class="sig-name descname"><span class="pre">flag_transfer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">widget</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.screens.dashboard.DashBoard.flag_transfer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flags a particular transfer by replacing the text values of the
+given widget which is usuallya a <code class="docutils literal notranslate"><span class="pre">button</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>flag</strong> (<em>String</em>) -- Usually takes value between <code class="docutils literal notranslate"><span class="pre">REMOVE</span></code> and <code class="docutils literal notranslate"><span class="pre">FLAG</span></code></p></li>
+<li><p><strong>widget</strong> -- ID of the <code class="docutils literal notranslate"><span class="pre">widget</span></code> whose <code class="docutils literal notranslate"><span class="pre">text</span></code> value will be overridden with
+<code class="docutils literal notranslate"><span class="pre">flag</span></code> value</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.screens.dashboard.DashBoard.get_updated_measurements">
+<span class="sig-name descname"><span class="pre">get_updated_measurements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">override_master_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">master_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.screens.dashboard.DashBoard.get_updated_measurements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the  <code class="docutils literal notranslate"><span class="pre">override_master_data</span></code> <code class="xref py py-class docutils literal notranslate"><span class="pre">src.qa_app_demo.MyMainApp</span></code>
+object with values from the custom <a class="reference internal" href="src.ui.widgets.html#src.ui.widgets.custom_input_field.CustomInputField" title="src.ui.widgets.custom_input_field.CustomInputField"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.ui.widgets.custom_input_field.CustomInputField</span></code></a>
+of <code class="docutils literal notranslate"><span class="pre">length</span></code>, <code class="docutils literal notranslate"><span class="pre">width</span></code>, <code class="docutils literal notranslate"><span class="pre">height</span></code> and <code class="docutils literal notranslate"><span class="pre">actual</span> <span class="pre">weight</span></code> if they exit. Else, it
+takes the value from the <code class="docutils literal notranslate"><span class="pre">hint_text</span></code> which is the measured value from
+<a class="reference internal" href="src.core.html#src.core.oak_pipeline.OakPipeline" title="src.core.oak_pipeline.OakPipeline"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.core.oak_pipeline.OakPipeline</span></code></a>.</p>
+<p>Also validates if the user entered valid measurements before submitting the
+<code class="docutils literal notranslate"><span class="pre">override</span></code> button and shows  <a class="reference internal" href="src.ui.widgets.html#src.ui.widgets.custom_snack_bar.CustomSnackbar" title="src.ui.widgets.custom_snack_bar.CustomSnackbar"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.ui.widgets.custom_snack_bar.CustomSnackbar</span></code></a>
+or <a class="reference internal" href="src.ui.widgets.html#src.ui.widgets.barcode_popup.BarcodePopup" title="src.ui.widgets.barcode_popup.BarcodePopup"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.ui.widgets.barcode_popup.BarcodePopup</span></code></a> accordingly.</p>
+<div class="admonition-todo admonition" id="id3">
+<p class="admonition-title">Todo</p>
+<p>Update the expected <code class="docutils literal notranslate"><span class="pre">quanity</span></code> and <code class="docutils literal notranslate"><span class="pre">weigth</span></code> values from <code class="docutils literal notranslate"><span class="pre">WMS</span></code></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Kivy <a class="reference external" href="https://kivy.org/doc/stable/api-kivy.clock.html">Clock</a> object is used to schedule <a class="reference internal" href="#src.ui.screens.dashboard.DashBoard.show_flag" title="src.ui.screens.dashboard.DashBoard.show_flag"><code class="xref py py-func docutils literal notranslate"><span class="pre">show_flag()</span></code></a> and
+<a class="reference internal" href="#src.ui.screens.dashboard.DashBoard.show_override_popup" title="src.ui.screens.dashboard.DashBoard.show_override_popup"><code class="xref py py-func docutils literal notranslate"><span class="pre">show_override_popup()</span></code></a> calls once.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>override_master_data</strong> (<em>dict</em>) -- Empty <code class="xref py py-class docutils literal notranslate"><span class="pre">src.qa_app_demo.MyMainApp</span></code> object</p></li>
+<li><p><strong>master_data</strong> (<em>dict</em>) -- Expected values from WMS</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Updated dimension, weight and quantity values.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.screens.dashboard.DashBoard.popup_dismiss">
+<span class="sig-name descname"><span class="pre">popup_dismiss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.screens.dashboard.DashBoard.popup_dismiss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dismisses the current popup on the screen</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.screens.dashboard.DashBoard.reset_measure_widget">
+<span class="sig-name descname"><span class="pre">reset_measure_widget</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.screens.dashboard.DashBoard.reset_measure_widget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invokes <a class="reference internal" href="#src.ui.screens.dashboard.DashBoard.show_updated_measurements" title="src.ui.screens.dashboard.DashBoard.show_updated_measurements"><code class="xref py py-func docutils literal notranslate"><span class="pre">show_updated_measurements()</span></code></a> with the below attributes.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">override</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="go">    status=&quot;default&quot;,</span>
+<span class="go">    obj_labels=[</span>
+<span class="go">        &quot;measure&quot;</span>
+<span class="go">    ]</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Kivy <a class="reference external" href="https://kivy.org/doc/stable/api-kivy.clock.html">Clock</a> object is used to schedule this function call once.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.screens.dashboard.DashBoard.show_flag">
+<span class="sig-name descname"><span class="pre">show_flag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Product</span> <span class="pre">flagged</span> <span class="pre">for</span> <span class="pre">further</span> <span class="pre">investigation'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">icon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'alert'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'tomato'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.screens.dashboard.DashBoard.show_flag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an instance of custom snack bar class
+<a class="reference internal" href="src.ui.widgets.html#src.ui.widgets.custom_snack_bar.CustomSnackbar" title="src.ui.widgets.custom_snack_bar.CustomSnackbar"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.ui.widgets.custom_snack_bar.CustomSnackbar</span></code></a> and displays it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dt</strong> (<em>float</em>) -- Refers to delta-time, which is the elapsed time between the
+scheduling and the callback</p></li>
+<li><p><strong>text</strong> (<em>str</em><em>, </em><em>optional</em>) -- Custom text message for <a class="reference internal" href="src.ui.widgets.html#src.ui.widgets.custom_snack_bar.CustomSnackbar" title="src.ui.widgets.custom_snack_bar.CustomSnackbar"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.ui.widgets.custom_snack_bar.CustomSnackbar</span></code></a>, by default &quot;Product flagged for further investigation&quot;</p></li>
+<li><p><strong>icon</strong> (<em>str</em><em>, </em><em>optional</em>) -- Custom icon for <a class="reference internal" href="src.ui.widgets.html#src.ui.widgets.custom_snack_bar.CustomSnackbar" title="src.ui.widgets.custom_snack_bar.CustomSnackbar"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.ui.widgets.custom_snack_bar.CustomSnackbar</span></code></a>, by default &quot;alert&quot;</p></li>
+<li><p><strong>color</strong> (<em>str</em><em>, </em><em>optional</em>) -- custom color for <a class="reference internal" href="src.ui.widgets.html#src.ui.widgets.custom_snack_bar.CustomSnackbar" title="src.ui.widgets.custom_snack_bar.CustomSnackbar"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.ui.widgets.custom_snack_bar.CustomSnackbar</span></code></a>, by default &quot;tomato&quot;</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.screens.dashboard.DashBoard.show_override_popup">
+<span class="sig-name descname"><span class="pre">show_override_popup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimensions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.screens.dashboard.DashBoard.show_override_popup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Displays an instance of <a class="reference internal" href="src.ui.widgets.html#src.ui.widgets.barcode_popup.BarcodePopup" title="src.ui.widgets.barcode_popup.BarcodePopup"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.ui.widgets.barcode_popup.BarcodePopup</span></code></a>
+for confirming the <code class="docutils literal notranslate"><span class="pre">override</span></code> action invoked by the user by presssing the
+<code class="docutils literal notranslate"><span class="pre">override</span></code> button in <a class="reference internal" href="#src.ui.screens.dashboard.DashBoard" title="src.ui.screens.dashboard.DashBoard"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.ui.screens.dashboard.DashBoard</span></code></a> screen.</p>
+<p>When a new updates dimension value is available, product <code class="docutils literal notranslate"><span class="pre">dimension</span></code>, <code class="docutils literal notranslate"><span class="pre">weight</span></code>
+and <code class="docutils literal notranslate"><span class="pre">quantity</span></code> values are also displayed.</p>
+<div class="admonition-todo admonition" id="id4">
+<p class="admonition-title">Todo</p>
+<p>Receive <code class="docutils literal notranslate"><span class="pre">product</span> <span class="pre">name</span></code> from <code class="docutils literal notranslate"><span class="pre">WMS</span></code></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dt</strong> (<em>float</em>) -- Refers to delta-time, which is the elapsed time between the
+scheduling and the callback</p></li>
+<li><p><strong>dimensions</strong> (<em>dict</em><em>, </em><em>optional</em>) -- Updated dimensions, by default {}</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.screens.dashboard.DashBoard.show_popup">
+<span class="sig-name descname"><span class="pre">show_popup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.screens.dashboard.DashBoard.show_popup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Displays a poppup with the provided <code class="docutils literal notranslate"><span class="pre">content</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>content</strong> (<em>string</em>) -- Message that has to be displayed in the popup.</p></li>
+<li><p><strong>dt</strong> (<em>float</em>) -- Refers to delta-time, which is the elapsed time between the
+scheduling and the callback</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.screens.dashboard.DashBoard.show_updated_measurements">
+<span class="sig-name descname"><span class="pre">show_updated_measurements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'lime</span> <span class="pre">green'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">icon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'check-circle'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">override</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'success'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj_labels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['measure',</span> <span class="pre">'weight',</span> <span class="pre">'item_cnt',</span> <span class="pre">'buttons',</span> <span class="pre">'putaway',</span> <span class="pre">'finish_qa_btn']</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.screens.dashboard.DashBoard.show_updated_measurements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the properties of widgets mentioned in the <code class="docutils literal notranslate"><span class="pre">obj_label</span></code> attributes
+based on the <code class="docutils literal notranslate"><span class="pre">status</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>when <code class="docutils literal notranslate"><span class="pre">override</span></code> is enabled, <a class="reference internal" href="#src.ui.screens.dashboard.DashBoard.flag_transfer" title="src.ui.screens.dashboard.DashBoard.flag_transfer"><code class="xref py py-func docutils literal notranslate"><span class="pre">flag_transfer()</span></code></a> is invoked with a <code class="docutils literal notranslate"><span class="pre">success</span></code>
+message</p>
+</div>
+<div class="admonition-todo admonition" id="id5">
+<p class="admonition-title">Todo</p>
+<p>Send <code class="docutils literal notranslate"><span class="pre">update</span></code> request to <code class="docutils literal notranslate"><span class="pre">WMS</span></code> when <code class="docutils literal notranslate"><span class="pre">override</span></code> is enabled.
+Display <code class="docutils literal notranslate"><span class="pre">flag</span></code> messages based on the response from WMS (success,fail)</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>color</strong> (<em>str</em><em>, </em><em>optional</em>) -- Custom color values for <a class="reference internal" href="#src.ui.screens.dashboard.DashBoard.flag_transfer" title="src.ui.screens.dashboard.DashBoard.flag_transfer"><code class="xref py py-func docutils literal notranslate"><span class="pre">flag_transfer()</span></code></a> , by default &quot;lime green&quot;</p></li>
+<li><p><strong>icon</strong> (<em>str</em><em>, </em><em>optional</em>) -- Custom icon value for <a class="reference internal" href="#src.ui.screens.dashboard.DashBoard.flag_transfer" title="src.ui.screens.dashboard.DashBoard.flag_transfer"><code class="xref py py-func docutils literal notranslate"><span class="pre">flag_transfer()</span></code></a>, by default &quot;check-circle&quot;</p></li>
+<li><p><strong>override</strong> (<em>bool</em><em>, </em><em>optional</em>) -- When enabled invokes <code class="docutils literal notranslate"><span class="pre">update</span></code> request to <code class="docutils literal notranslate"><span class="pre">wms</span></code>, by default True</p></li>
+<li><p><strong>status</strong> (<em>str</em><em>, </em><em>optional</em>) -- It takes two values <code class="docutils literal notranslate"><span class="pre">success</span></code> and <code class="docutils literal notranslate"><span class="pre">lapse</span></code> for now. More
+options can be added, by default &quot;success&quot;</p></li>
+<li><p><strong>obj_labels</strong> (<em>list</em><em>, </em><em>optional</em>) -- List of widgets that has to be updated based on the <code class="docutils literal notranslate"><span class="pre">status</span></code>,
+by default [ &quot;measure&quot;, &quot;weight&quot;, &quot;item_cnt&quot;, &quot;buttons&quot;, &quot;putaway&quot;, &quot;finish_qa_btn&quot;, ]</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.screens.dashboard.DashBoard.text_field_error_management">
+<span class="sig-name descname"><span class="pre">text_field_error_management</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'False'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_msg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.screens.dashboard.DashBoard.text_field_error_management" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages the error states of the <code class="docutils literal notranslate"><span class="pre">text</span> <span class="pre">field</span></code> widget in the
+provided <code class="docutils literal notranslate"><span class="pre">widget</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>screen</strong> -- <code class="docutils literal notranslate"><span class="pre">text</span> <span class="pre">field</span></code> widget in the current screen</p></li>
+<li><p><strong>error</strong> (<em>str</em><em>, </em><em>optional</em>) -- Error state of the text field, by default &quot;False&quot;</p></li>
+<li><p><strong>error_msg</strong> (<em>str</em><em>, </em><em>optional</em>) -- The <code class="docutils literal notranslate"><span class="pre">helper</span> <span class="pre">text</span></code> that is displayed when the <code class="docutils literal notranslate"><span class="pre">error</span></code> state
+is enabled, by default &quot;&quot;</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.screens.dashboard.DashBoard.update_ids">
+<span class="sig-name descname"><span class="pre">update_ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ids</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text_ids</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_ids</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.screens.dashboard.DashBoard.update_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updated the class objects with the <code class="docutils literal notranslate"><span class="pre">root</span></code> , <code class="docutils literal notranslate"><span class="pre">text</span> <span class="pre">fields</span> <span class="pre">ids</span></code>, <code class="docutils literal notranslate"><span class="pre">labels</span></code>
+widget details from the main app class <code class="xref py py-class docutils literal notranslate"><span class="pre">src.qa_app_demo.MyMainApp</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dt</strong> (<em>float</em>) -- Refers to delta-time, which is the elapsed time between the
+scheduling and the callback</p></li>
+<li><p><strong>ids</strong> -- list of all the widget ids in the current window from the main app class</p></li>
+<li><p><strong>root</strong> -- Root id of the current window</p></li>
+<li><p><strong>text_ids</strong> (<em>list</em>) -- list of text field ids from <code class="xref py py-class docutils literal notranslate"><span class="pre">src.qa_app_demo.MyMainApp</span></code></p></li>
+<li><p><strong>label_ids</strong> (<em>list</em>) -- list of label ids from <code class="xref py py-class docutils literal notranslate"><span class="pre">src.qa_app_demo.MyMainApp</span></code></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>updated ids</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.screens.dashboard.DashBoard.update_labels">
+<span class="sig-name descname"><span class="pre">update_labels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">widgets</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['measure']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'success'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim_actl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{'act_wgt':</span> <span class="pre">0,</span> <span class="pre">'depth':</span> <span class="pre">0,</span> <span class="pre">'exp_wgt':</span> <span class="pre">0,</span> <span class="pre">'length':</span> <span class="pre">0,</span> <span class="pre">'width':</span> <span class="pre">0}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim_exp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{'act_wgt':</span> <span class="pre">0,</span> <span class="pre">'depth':</span> <span class="pre">0,</span> <span class="pre">'exp_wgt':</span> <span class="pre">0,</span> <span class="pre">'length':</span> <span class="pre">0,</span> <span class="pre">'width':</span> <span class="pre">0}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.screens.dashboard.DashBoard.update_labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the <a class="reference internal" href="src.ui.widgets.html#src.ui.widgets.custom_input_field.CustomInputField" title="src.ui.widgets.custom_input_field.CustomInputField"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.ui.widgets.custom_input_field.CustomInputField</span></code></a> and
+<code class="docutils literal notranslate"><span class="pre">widget</span> <span class="pre">labels</span></code> with the expected value if the status is <code class="docutils literal notranslate"><span class="pre">lapse</span></code> or with actual
+values if the status is <code class="docutils literal notranslate"><span class="pre">success</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>window_size</strong> (<em>list</em>) -- Size of the window</p></li>
+<li><p><strong>labels</strong> (<em>[</em><em>type</em><em>]</em>) -- Usually [length, width,height] can also be extended with additional labels [weight,quantity]</p></li>
+<li><p><strong>widgets</strong> (<em>list</em><em>, </em><em>optional</em>) -- List of widgets, by default [&quot;measure&quot;]</p></li>
+<li><p><strong>status</strong> (<em>str</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">success</span></code> or <code class="docutils literal notranslate"><span class="pre">lapse</span></code> , by default &quot;success&quot;</p></li>
+<li><p><strong>dim_actl</strong> (<em>dict</em><em>, </em><em>optional</em>) -- Actual dimension measured, by default {&quot;width&quot;: 0, &quot;length&quot;: 0, &quot;depth&quot;: 0, &quot;act_wgt&quot;: 0, &quot;exp_wgt&quot;: 0}</p></li>
+<li><p><strong>dim_exp</strong> (<em>dict</em><em>, </em><em>optional</em>) -- Expected values, by default {&quot;width&quot;: 0, &quot;length&quot;: 0, &quot;depth&quot;: 0, &quot;act_wgt&quot;: 0, &quot;exp_wgt&quot;: 0}</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.screens.dashboard.DashBoard.update_widgets">
+<span class="sig-name descname"><span class="pre">update_widgets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.screens.dashboard.DashBoard.update_widgets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invokes <a class="reference internal" href="#src.ui.screens.dashboard.DashBoard.show_updated_measurements" title="src.ui.screens.dashboard.DashBoard.show_updated_measurements"><code class="xref py py-func docutils literal notranslate"><span class="pre">show_updated_measurements()</span></code></a> with the below attributes.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">override</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="go">    status=&quot;default&quot;,</span>
+<span class="go">    obj_labels=[</span>
+<span class="go">        &quot;weight&quot;,</span>
+<span class="go">        &quot;item_cnt&quot;,</span>
+<span class="go">        &quot;buttons&quot;,</span>
+<span class="go">        &quot;putaway&quot;,</span>
+<span class="go">        &quot;finish_qa_btn&quot;,</span>
+<span class="go">    ]</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Kivy <a class="reference external" href="https://kivy.org/doc/stable/api-kivy.clock.html">Clock</a> object us used to schedule this function call once.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-src.ui.screens.search_page">
+<span id="search-screen"></span><h1>Search screen<a class="headerlink" href="#module-src.ui.screens.search_page" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.ui.screens.search_page.SearchPage">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">src.ui.screens.search_page.</span></span><span class="sig-name descname"><span class="pre">SearchPage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.screens.search_page.SearchPage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">kivy.uix.screenmanager.Screen</span></code></p>
+<p>This is the Class object for the <code class="docutils literal notranslate"><span class="pre">Main</span> <span class="pre">window</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Click <a class="reference external" href="https://drive.google.com/file/d/1k3pDAa1hvT7hjmp88pAzcF0m3rR5ofWA/view?usp=sharing">here</a> to see <code class="docutils literal notranslate"><span class="pre">Search</span> <span class="pre">screen</span></code> example.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Screen</strong> -- A relative layout of an empty screen associated with the
+current window.</p></li>
+<li><p><strong>popup</strong> -- An instance of <a class="reference internal" href="src.ui.widgets.html#src.ui.widgets.barcode_popup.BarcodePopup" title="src.ui.widgets.barcode_popup.BarcodePopup"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.ui.widgets.barcode_popup.BarcodePopup</span></code></a>
+to display popups in the current screen.</p></li>
+<li><p><strong>nxt_screen</strong> -- Upcoming screen</p></li>
+<li><p><strong>root</strong> -- ID of the <code class="docutils literal notranslate"><span class="pre">root</span></code> widet of the current window</p></li>
+<li><p><strong>name_wid</strong> -- ID of the <code class="docutils literal notranslate"><span class="pre">product</span> <span class="pre">name</span></code> widget</p></li>
+<li><p><strong>sku_wid</strong> -- ID of the <code class="docutils literal notranslate"><span class="pre">product</span> <span class="pre">sku</span></code> widget</p></li>
+<li><p><strong>label_wid</strong> -- ID of the <code class="docutils literal notranslate"><span class="pre">weight</span> <span class="pre">label</span></code> widget</p></li>
+<li><p><strong>icon_wid</strong> -- ID of the <code class="docutils literal notranslate"><span class="pre">weight</span> <span class="pre">icon</span></code> widget</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.screens.search_page.SearchPage.clear_Search_text">
+<span class="sig-name descname"><span class="pre">clear_Search_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text_wid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.screens.search_page.SearchPage.clear_Search_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clears the text entered in a  <code class="docutils literal notranslate"><span class="pre">text</span> <span class="pre">field</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text_wid</strong> -- <code class="docutils literal notranslate"><span class="pre">text</span> <span class="pre">field</span></code> id to be cleared</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.screens.search_page.SearchPage.popup_dismiss">
+<span class="sig-name descname"><span class="pre">popup_dismiss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.screens.search_page.SearchPage.popup_dismiss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dismisses the current popup on the screen</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.screens.search_page.SearchPage.search_transfer_barcode">
+<span class="sig-name descname"><span class="pre">search_transfer_barcode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">barcode_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">master_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.screens.search_page.SearchPage.search_transfer_barcode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates <code class="docutils literal notranslate"><span class="pre">scan</span></code> widget by invoking call to <a class="reference internal" href="#src.ui.screens.search_page.SearchPage.update_scan_widget" title="src.ui.screens.search_page.SearchPage.update_scan_widget"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_scan_widget()</span></code></a>
+When the scanned <code class="docutils literal notranslate"><span class="pre">barcode</span></code> is present in WMS.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Kivy <a class="reference external" href="https://kivy.org/doc/stable/api-kivy.clock.html">Clock</a> object us used to schedule this function call once.</p>
+</div>
+<dl class="simple">
+<dt>..todo::</dt><dd><p><code class="docutils literal notranslate"><span class="pre">GET</span></code> request to WMS</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>user_name</strong> (<em>str</em>) -- Name provided by the user</p></li>
+<li><p><strong>barcode_data</strong> (<em>str</em>) -- Decoded barcode information</p></li>
+<li><p><strong>master_data</strong> (<em>dict</em>) -- Expected values from wms</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Status of the <code class="docutils literal notranslate"><span class="pre">QA</span></code> session , <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.screens.search_page.SearchPage.search_transfer_id">
+<span class="sig-name descname"><span class="pre">search_transfer_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cur_screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">master_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.screens.search_page.SearchPage.search_transfer_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invokes call to the <a class="reference internal" href="#src.ui.screens.search_page.SearchPage.update_scan_widget" title="src.ui.screens.search_page.SearchPage.update_scan_widget"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_scan_widget()</span></code></a> when the search
+ID matches the <code class="docutils literal notranslate"><span class="pre">WMS</span></code> data and the <code class="docutils literal notranslate"><span class="pre">trasfer</span> <span class="pre">state</span></code> is <code class="docutils literal notranslate"><span class="pre">awaiting</span> <span class="pre">QA</span></code>
+else invokes <a class="reference internal" href="#src.ui.screens.search_page.SearchPage.show_popup" title="src.ui.screens.search_page.SearchPage.show_popup"><code class="xref py py-func docutils literal notranslate"><span class="pre">show_popup()</span></code></a> to display the <code class="docutils literal notranslate"><span class="pre">transfer</span> <span class="pre">state</span></code> which is
+either <code class="docutils literal notranslate"><span class="pre">completed</span></code> or <code class="docutils literal notranslate"><span class="pre">flagged</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Kivy <a class="reference external" href="https://kivy.org/doc/stable/api-kivy.clock.html">Clock</a> object us used to schedule this function call once.</p>
+</div>
+<div class="admonition-todo admonition" id="id6">
+<p class="admonition-title">Todo</p>
+<p><code class="docutils literal notranslate"><span class="pre">GET</span></code> request to WMS</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cur_screen</strong> -- ID of the current screen</p></li>
+<li><p><strong>user_name</strong> (<em>string</em>) -- <code class="docutils literal notranslate"><span class="pre">name</span></code> provided by the user</p></li>
+<li><p><strong>master_data</strong> (<em>dict</em>) -- Expected values from WMS</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>bool</em> -- Status of the <code class="docutils literal notranslate"><span class="pre">QA</span></code> session , <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code></p></li>
+<li><p><em>string</em> -- Transfer ID entered in the text field</p></li>
+<li><p><em>dict</em> -- Expected values for the searched transfer ID</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.screens.search_page.SearchPage.show_popup">
+<span class="sig-name descname"><span class="pre">show_popup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.screens.search_page.SearchPage.show_popup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Displays a poppup with the provided <code class="docutils literal notranslate"><span class="pre">content</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>content</strong> (<em>string</em>) -- Message to be displayed in the popup.</p></li>
+<li><p><strong>dt</strong> (<em>float</em>) -- Refers to delta-time, which is the elapsed time between the
+scheduling and the callback</p></li>
+<li><p><strong>info</strong> (<em>string</em>) -- Title to be displayed in the popup.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.screens.search_page.SearchPage.text_field_error_management">
+<span class="sig-name descname"><span class="pre">text_field_error_management</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'False'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_msg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.screens.search_page.SearchPage.text_field_error_management" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages the error states of the <code class="docutils literal notranslate"><span class="pre">text</span> <span class="pre">field</span></code> widget in the
+provided <code class="docutils literal notranslate"><span class="pre">widget</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>screen</strong> -- <code class="docutils literal notranslate"><span class="pre">text</span> <span class="pre">field</span></code> widget in the current screen</p></li>
+<li><p><strong>error</strong> (<em>str</em><em>, </em><em>optional</em>) -- Error state of the text field, by default &quot;False&quot;</p></li>
+<li><p><strong>error_msg</strong> (<em>str</em><em>, </em><em>optional</em>) -- The <code class="docutils literal notranslate"><span class="pre">helper</span> <span class="pre">text</span></code> that is displayed when the <code class="docutils literal notranslate"><span class="pre">error</span></code> state
+is enabled, by default &quot;&quot;</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.screens.search_page.SearchPage.update_ids">
+<span class="sig-name descname"><span class="pre">update_ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nxt_screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name_wid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sku_wid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_wid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">icon_wid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.screens.search_page.SearchPage.update_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the class objects with the values passed from the main
+<code class="xref py py-class docutils literal notranslate"><span class="pre">src.qa_app_demo.MyMainApp</span></code> class.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.screens.search_page.SearchPage.update_scan_widget">
+<span class="sig-name descname"><span class="pre">update_scan_widget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">master_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.screens.search_page.SearchPage.update_scan_widget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the <code class="docutils literal notranslate"><span class="pre">scan</span></code> wiget with the values present in the
+master data.</p>
+<div class="admonition-todo admonition" id="id7">
+<p class="admonition-title">Todo</p>
+<p>Update value from <code class="docutils literal notranslate"><span class="pre">WMS</span></code></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>user_name</strong> (<em>string</em>) -- <code class="docutils literal notranslate"><span class="pre">name</span></code> provided by the user</p></li>
+<li><p><strong>master_data</strong> (<em>dict</em>) -- Expected values from <code class="docutils literal notranslate"><span class="pre">WMS</span></code> , by default None</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="src.ui.widgets.html" class="btn btn-neutral float-right" title="Custom popup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="src.ui.html" class="btn btn-neutral float-left" title="Kivy UI" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Elakkiya.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,576 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="python" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Utils &mdash; QA App Station 0.0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Kivy UI" href="src.ui.html" />
+    <link rel="prev" title="QA App Station (Kivy) package" href="src.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> QA App Station
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="src.html">QA App Station (Kivy) package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="src.html#module-src.qa_app_demo">Kivy QAApp</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="src.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Utils</a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.ui.html">Kivy UI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.core.html">DepthAI Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.conf.html">Hydra Configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">QA App Station</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="src.html">QA App Station (Kivy) package</a> &raquo;</li>
+        
+      <li>Utils</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/src.utils.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-src.utils.utils">
+<span id="utils"></span><h1>Utils<a class="headerlink" href="#module-src.utils.utils" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.utils.utils.FeatureExtraction">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">src.utils.utils.</span></span><span class="sig-name descname"><span class="pre">FeatureExtraction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.utils.utils.FeatureExtraction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class object performs feature matching using ORB feature detection
+which consists of three steps, feature point extraction, generating feature
+point descriptors and feature point matching. Read more about <a class="reference external" href="https://iopscience.iop.org/article/10.1088/1742-6596/1237/3/032020/pdf">ORB</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Oriented FAST and Rotated BRIEF (ORB) is an viable alternative to SIFT and SURF.
+ORB was conceived mainly because SIFT and SURF are patented algorithms. ORB is
+better than SURF for feature extraction tasks while being almost two orders of
+magnitude faster.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> -- File path to the list of images used in feature extraction</p></li>
+<li><p><strong>images</strong> (<em>img</em>) -- Images from the provided file path are extracted here for
+feature extraction and feature point matching.</p></li>
+<li><p><strong>class_names</strong> (<em>list</em>) -- Carries the list of all the unique class names to describe
+and identify an image from any given file path.</p></li>
+<li><p><strong>des_list</strong> (<em>list</em>) -- Stores the extracted feature point descriptors</p></li>
+<li><p><strong>product_list</strong> (<em>list</em>) -- Points to the list of images in the given file path</p></li>
+<li><p><strong>orb</strong> (<a class="reference external" href="https://docs.opencv.org/3.4/db/d95/classcv_1_1ORB.html">ORB</a>) -- Class implementing the <a class="reference external" href="https://iopscience.iop.org/article/10.1088/1742-6596/1237/3/032020/pdf">ORB</a> (oriented BRIEF) keypoint detector and descriptor extractor</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.utils.utils.FeatureExtraction.__resize_image">
+<span class="sig-name descname"><span class="pre">__resize_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scale</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">img</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.utils.utils.FeatureExtraction.__resize_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resizes a given image ie. either shrink or scale up to meet the size
+requirements.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>scale</strong> (<em>[</em><em>float</em><em>,</em><em>float</em><em>]</em>) -- The factor by which the image size has to be changed (% change).
+It is determined by the base height of the OAK cam from the objects
+on focus. Separate scale values for x and y axis is expected.
+Currently configured to <code class="docutils literal notranslate"><span class="pre">0.92</span></code> for both the axis. To modify the values
+refer to <a class="reference internal" href="src.conf.html#src.conf.config.CvDefaultConfig" title="src.conf.config.CvDefaultConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.conf.config.CvDefaultConfig</span></code></a>.</p></li>
+<li><p><strong>img</strong> -- Image that needs to be resized.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Returns a resized image by scale factor.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>img</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.utils.utils.FeatureExtraction.find_descriptors">
+<span class="sig-name descname"><span class="pre">find_descriptors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">images</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.utils.utils.FeatureExtraction.find_descriptors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds keypoints in an image and computes their descriptors.
+Refer to <a class="reference external" href="http://amroamroamro.github.io/mexopencv/matlab/cv.ORB.detectAndCompute.html">orb_detect</a> for more info.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>images</strong> (<em>list</em>) -- List of images</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.utils.utils.FeatureExtraction.multiple_product_id">
+<span class="sig-name descname"><span class="pre">multiple_product_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">display</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thres</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.utils.utils.FeatureExtraction.multiple_product_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes key point descriptor for a given image and uses
+<a class="reference external" href="https://docs.opencv.org/3.4/d3/da1/classcv_1_1BFMatcher.html">Brute-Force MAtcher</a> to match features from one
+image with a list of images.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Brute-Force matcher is simple. It takes the descriptor of one feature
+in first set and is matched with all other features in second set using
+some distance calculation. And the closest one is returned.</p>
+</div>
+<p>The matcher returns only those matches with value (i,j), such that i-th descriptor
+in set A has j-th descriptor in set B as the best match and vice versa.
+That is, the two features in both sets should match each other.</p>
+<p><code class="docutils literal notranslate"><span class="pre">BFMatcher.knnMatch()</span></code> is used to find k best matches where k can be specified.
+The current value of k is 2.0.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>img</strong> (<em>img</em>) -- Input image for feature extraction and matching with existing img dataset.</p></li>
+<li><p><strong>display</strong> (<em>bool</em><em>, </em><em>optional</em>) -- If <code class="docutils literal notranslate"><span class="pre">True</span></code> matches are drawn on input image and displayed in a window,
+by default False</p></li>
+<li><p><strong>thres</strong> (<em>int</em><em>, </em><em>optional</em>) -- Threshold value to filter images, by default 15</p></li>
+<li><p><strong>scale</strong> (<em>int</em><em>, </em><em>optional</em>) -- Scale factor for image resizing, by default 100</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Returns a filtered list of best image matches.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.utils.utils.FeatureExtraction.show_features">
+<span class="sig-name descname"><span class="pre">show_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">img2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.utils.utils.FeatureExtraction.show_features" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes key point descriptor for a given image and uses
+<a class="reference external" href="https://docs.opencv.org/3.4/d3/da1/classcv_1_1BFMatcher.html">Brute-Force MAtcher</a> to match features from one
+image with another image.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Refer to <a class="reference internal" href="#src.utils.utils.FeatureExtraction.multiple_product_id" title="src.utils.utils.FeatureExtraction.multiple_product_id"><code class="xref py py-func docutils literal notranslate"><span class="pre">multiple_product_id()</span></code></a> for more info.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>img1</strong> -- input image for key point matching</p></li>
+<li><p><strong>img2</strong> -- input image for key point matching</p></li>
+<li><p><strong>scale</strong> (<em>int</em><em>, </em><em>optional</em>) -- Scale factor for image resizing, by default 100</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.utils.utils.FeatureExtraction.update_prod_list">
+<span class="sig-name descname"><span class="pre">update_prod_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.utils.utils.FeatureExtraction.update_prod_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extracts images and class names from a directory and updates
+the class objects. Invokes the <a class="reference internal" href="#src.utils.utils.FeatureExtraction.find_descriptors" title="src.utils.utils.FeatureExtraction.find_descriptors"><code class="xref py py-func docutils literal notranslate"><span class="pre">find_descriptors()</span></code></a> after
+updating the class objects.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.utils.utils.find_distance">
+<span class="sig-prename descclassname"><span class="pre">src.utils.utils.</span></span><span class="sig-name descname"><span class="pre">find_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.utils.utils.find_distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is used to measure the euclidean distance between two corner points.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p1</strong> (<em>list</em><em>, </em><em>[</em><em>int</em><em>,</em><em>int</em><em>]</em>) -- x and y co-ordinates of point 1</p></li>
+<li><p><strong>p2</strong> (<em>list</em><em>, </em><em>[</em><em>int</em><em>,</em><em>int</em><em>]</em>) -- x and y co-ordinates of point 2</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Euclidean distance between two points</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.utils.utils.find_distance_abs">
+<span class="sig-prename descclassname"><span class="pre">src.utils.utils.</span></span><span class="sig-name descname"><span class="pre">find_distance_abs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.utils.utils.find_distance_abs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns absolute distance between two points</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p1</strong> (<em>list</em><em>, </em><em>[</em><em>int</em><em>,</em><em>int</em><em>]</em>) -- x and y co-ordinates of point 1</p></li>
+<li><p><strong>p2</strong> (<em>list</em><em>, </em><em>[</em><em>int</em><em>,</em><em>int</em><em>]</em>) -- x and y co-ordinates of point 2</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Absolute distance between two points</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.utils.utils.get_bounding_rect">
+<span class="sig-prename descclassname"><span class="pre">src.utils.utils.</span></span><span class="sig-name descname"><span class="pre">get_bounding_rect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img_wrap_shadow</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">img_contour</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_factor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">area_min</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">draw</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regular_box</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(114,</span> <span class="pre">143,</span> <span class="pre">155)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.utils.utils.get_bounding_rect" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function finds the contours in a the given wrapped image using
+<a class="reference external" href="https://docs.opencv.org/3.4/d3/dc0/group__imgproc__shape.html#ga17ed9f5d79ae97bd4c7cf18403e1689a">cv2.findContours</a> function. Finds the area of all the derived
+contours and filters the contours with a certain <code class="docutils literal notranslate"><span class="pre">area_min</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">regular_box</span></code> is enabled, it draws a regular rectangular bounding box
+else, it draws a rotated bounding box aligned with the orientation of the
+contour points</p>
+</div>
+<p>Finds the disatance between the corner points using <a class="reference internal" href="#src.utils.utils.find_distance" title="src.utils.utils.find_distance"><code class="xref py py-func docutils literal notranslate"><span class="pre">src.utils.utils.find_distance()</span></code></a>
+and writes the measured <code class="docutils literal notranslate"><span class="pre">length</span></code> and <code class="docutils literal notranslate"><span class="pre">width</span></code> value on the input image.</p>
+<p>Draws an arrowed line to indicate the corners.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>img_wrap_shadow</strong> (<em>img</em>) -- Wrapped image on which the bounding box and measurements will be written</p></li>
+<li><p><strong>img</strong> (<em>img</em>) -- Actual image</p></li>
+<li><p><strong>img_contour</strong> (<em>img</em>) -- Pre processed image for finding contours</p></li>
+<li><p><strong>scale_factor</strong> (<em>float</em>) -- Scale factor used in distance measured. The measured values need to be scaled
+to the size of the image</p></li>
+<li><p><strong>area_min</strong> (<em>int</em>) -- Area threshold to filter the contour points</p></li>
+<li><p><strong>draw</strong> (<em>bool</em><em>, </em><em>optional</em>) -- When enabled, draws contour on the <code class="docutils literal notranslate"><span class="pre">img_contour</span></code></p></li>
+<li><p><strong>regular_box</strong> (<em>bool</em><em>, </em><em>optional</em>) -- When enabled draws a regular bounding box instead of
+rotated bounding box, by default False</p></li>
+<li><p><strong>color</strong> (<em>tuple</em><em>, </em><em>optional</em>) -- Choice of color for bounding box, by default (114, 143, 155)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>img</em> -- Processed output img where the bounding box and measured values are drawn</p></li>
+<li><p><em>float</em> -- Measured length value</p></li>
+<li><p><em>float</em> -- Measured width value</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.utils.utils.get_contours">
+<span class="sig-prename descclassname"><span class="pre">src.utils.utils.</span></span><span class="sig-name descname"><span class="pre">get_contours</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c_thr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[20,</span> <span class="pre">20]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">display</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_area</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">draw</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.utils.utils.get_contours" title="Permalink to this definition">¶</a></dt>
+<dd><p>Contours is a curve joining all the continuous points (along the boundary),
+having same color or intensity. The contours are a useful tool for shape analysis
+and object detection and recognition.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For better accuracy, binary images are used. Input image is converted to gray
+scale, gaussian blur, canny edge detection. dilation and erosion are performed
+in the given order before finding contours using <a class="reference external" href="https://docs.opencv.org/3.4/d3/dc0/group__imgproc__shape.html#ga17ed9f5d79ae97bd4c7cf18403e1689a">cv2.findContours()</a></p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">CHAIN_APPROX_SIMPLE</span> <span class="o">-</span> <span class="n">to</span> <span class="n">display</span> <span class="n">few</span> <span class="n">contour</span> <span class="n">points</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">CHAIN_APPROX_NONE</span> <span class="o">-</span> <span class="n">to</span> <span class="n">display</span> <span class="nb">all</span> <span class="n">contour</span> <span class="n">points</span>
+</pre></div>
+</div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>img</strong> (<em>image</em>) -- Input image for contour extraction.</p></li>
+<li><p><strong>c_thr</strong> (<em>list</em><em>, </em><em>optional</em>) -- Threshold values for canny edge detection, by default [20, 20]</p></li>
+<li><p><strong>display</strong> (<em>bool</em><em>, </em><em>optional</em>) -- If, <code class="docutils literal notranslate"><span class="pre">True</span></code> displays canny edge detected image in a window,
+by default False</p></li>
+<li><p><strong>min_area</strong> (<em>int</em><em>, </em><em>optional</em>) -- Minimum area requirement for filtering contours,
+by default 1000</p></li>
+<li><p><strong>filter</strong> (<em>int</em><em>, </em><em>optional</em>) -- Value for filtering curve approximation (corner points), by default 0</p></li>
+<li><p><strong>draw</strong> (<em>bool</em><em>, </em><em>optional</em>) -- If <code class="docutils literal notranslate"><span class="pre">True</span></code> draw contour outlines on given input image, by default False</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>img</em> -- Modified input image</p></li>
+<li><p><em>final_countours</em> -- Filtered contour values from the input image which matches the <code class="docutils literal notranslate"><span class="pre">min_area</span></code>
+and <code class="docutils literal notranslate"><span class="pre">filter</span></code> parameters.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.utils.utils.re_order">
+<span class="sig-prename descclassname"><span class="pre">src.utils.utils.</span></span><span class="sig-name descname"><span class="pre">re_order</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.utils.utils.re_order" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initially corner points are not in a particular order
+So it will not detect contours in any sequence.</p>
+<p>This function sorts the points in [top left , top right,
+bottom left, bottom right] using summation and subtraction method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>points</strong> (<em>list</em><em>, </em><em>[</em><em>[</em><em>int</em><em>,</em><em>int</em><em>]</em><em>,</em><em>[</em><em>int</em><em>,</em><em>int</em><em>]</em><em>,</em><em>[</em><em>int</em><em>,</em><em>int</em><em>]</em><em>,</em><em>[</em><em>int</em><em>,</em><em>int</em><em>]</em><em>]</em>) -- unsorted points in no given order</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>list, [[int,int],[int,int],[int,int],[int,int]]</em> -- Sorted points in [top left , top right,</p></li>
+<li><p><em>bottom left, bottom right] order</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.utils.utils.relative_to_abs_path">
+<span class="sig-prename descclassname"><span class="pre">src.utils.utils.</span></span><span class="sig-name descname"><span class="pre">relative_to_abs_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relative_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.utils.utils.relative_to_abs_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the absolute path for the provided relative path.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To manage and dynamically create a hierarchical configuration by composition <code class="docutils literal notranslate"><span class="pre">Hydra</span></code>
+is used. Hydra solves the problem of needing to specify a new output directory for each run,
+by creating a directory for each run and executing code within that working directory.</p>
+<p>To get the absolute path the folowing command is helpful,</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">hydra</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">to_absolute_path</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="n">relative_path</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>relative_path</strong> -- Relative path of a file</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Returns absolute path for the given relative path</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.utils.utils.resize_image">
+<span class="sig-prename descclassname"><span class="pre">src.utils.utils.</span></span><span class="sig-name descname"><span class="pre">resize_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scale</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">img</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.utils.utils.resize_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resizes a given image ie. either shrink or scale up to meet the size
+requirements.
+:param scale: The factor by which the image size has to be changed (% change).</p>
+<blockquote>
+<div><p>It is determined by the base height of the OAK cam from the objects
+on focus. Separate scale values for x and y axis is expected.
+Currently configured to 0.92 for both the axis. To modify the values
+refer to <a class="reference internal" href="src.conf.html#src.conf.config.CvDefaultConfig" title="src.conf.config.CvDefaultConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.conf.config.CvDefaultConfig</span></code></a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>img</strong> -- Image that needs to be resized.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Returns a resized image by scale factor.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>imgage</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.utils.utils.warp_img">
+<span class="sig-prename descclassname"><span class="pre">src.utils.utils.</span></span><span class="sig-name descname"><span class="pre">warp_img</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.utils.utils.warp_img" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wraps a given image to the provided corner points</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>img</strong> (<em>[</em><em>type</em><em>]</em>) -- [description]</p></li>
+<li><p><strong>points</strong> (<em>list</em><em>, </em><em>[</em><em>[</em><em>int</em><em>,</em><em>int</em><em>]</em><em>,</em><em>[</em><em>int</em><em>,</em><em>int</em><em>]</em><em>,</em><em>[</em><em>int</em><em>,</em><em>int</em><em>]</em><em>,</em><em>[</em><em>int</em><em>,</em><em>int</em><em>]</em><em>]</em>) -- Four corner points to wrap the input image</p></li>
+<li><p><strong>w</strong> (<em>list</em><em>, </em><em>[</em><em>int</em><em>,</em><em>int</em><em>]</em>) -- Expected width of the final img</p></li>
+<li><p><strong>h</strong> (<em>list</em><em>, </em><em>[</em><em>int</em><em>,</em><em>int</em><em>]</em>) -- Expected height og the final img</p></li>
+<li><p><strong>pad</strong> (<em>int</em><em>, </em><em>optional</em>) -- Padding value to crop image to bring objects in focus.
+Elimates unwanted edge pixels, by default 20</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Wrapped image based on the provided corner points</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>img</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="src.ui.html" class="btn btn-neutral float-right" title="Kivy UI" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="src.html" class="btn btn-neutral float-left" title="QA App Station (Kivy) package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Elakkiya.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

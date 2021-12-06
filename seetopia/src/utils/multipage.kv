@@ -1,0 +1,171 @@
+# creating page Layout
+# rgba: 231 / 255., 241/ 255., 245 / 255., 1
+# rgba: 214 / 255., 211/ 255., 206 / 255., 1
+# rgba: 97 / 255., 145/ 255., 159 / 255., 1
+
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+
+
+<MyTile@SmartTileWithStar>
+    size_hint_y: None
+    height: "240dp"
+
+
+
+
+<PageLayout>:
+#########################################################################
+    
+    MDBoxLayout:
+        orientation: "vertical"
+        MDToolbar:
+            title: "SKUtopia"
+            # md_bg_color: rail.md_bg_color
+            md_bg_color: get_color_from_hex("#728F9B")
+            left_action_items: [["menu", lambda x: app.rail_open()]]
+            size_hint_y:  None
+            height: "50dp"
+        
+        MDBoxLayout:
+            MDNavigationRail:
+                id: rail
+                md_bg_color: get_color_from_hex("#F5F5F5")
+                # color_normal: get_color_from_hex("#718089")
+                color_active: get_color_from_hex("#f3ab44")
+                use_resizeable: True                     
+                MDNavigationRailItem:
+                    icon: "texture-box"
+                    text: "Area"
+                    
+                MDNavigationRailItem:
+                    icon: "filter"
+                    text: "Filter"
+                
+                MDNavigationRailItem:
+                    icon: "selection-drag"
+                    text: "Select"
+            MDBoxLayout:
+                Image:
+                    id: vid
+                    allow_stretch: True  
+                    keep_ratio: True 
+                    # pos_hint:{"center_x": 0.5, "center_y":0.5}
+                    # pos_hint:{"x": 0}
+                MDBoxLayout:
+                    id: main_screen
+                    orientation: 'vertical'
+                    MDCard:
+                        orientation: 'vertical'  
+                        elevation: 20   
+                        padding: "8dp"
+
+                        MDCard:
+                            pos_hint:{"center_x": 0.5, "center_y":0.5}
+                            orientation: 'vertical'
+                            username: username
+                            Widget:
+                                size_hint_y: 0.2
+                            Image:
+                                id: skutopia_logo
+                                source: 'C:/Users/ElakkiyaRaj/0_PoetryProjects/skutopia-aiworkstation/seetopia/resources/img/SKUTOPIA_logo.png'
+                                size_hint_y: None
+                                height: 0.2 * self.texture_size[1]
+                                # pos_hint: { "center_y":0.5}
+                                padding: dp(25)
+                                
+                            Widget:
+                                size_hint_y: 0.1
+                            
+                            MDTextField:
+                                id: username
+                                size_hint_x: .6
+                                hint_text: "Enter your name"
+                                mode: "fill"
+                                fill_color: 0, 0, 0, .05
+                                radius: [5,5,0,0] #ask pat
+                                pos_hint: {"center_x": .5, "center_y": .5}
+                                color_mode: 'custom'
+                                # helper_text_mode: "on_error"
+                                line_color_focus: 0, 0, 0, 1
+                                # on_focus: app.user_text()
+                                # required: True
+
+                            # Widget:
+                            #     size_hint_y: None
+                            #     height: "60dp"
+                            # MDTextFieldRound:
+                            #     id: welcome_text_field
+                            #     hint_text: "Enter your name"
+                            #     icon_left: "account"
+                            #     size_hint: None, None
+                            #     size: 200,300
+                            #     font_size: 12
+                            #     pos_hint: {"center_x": 0.5}
+                            #     normal_color: get_color_from_hex("#F5F5F5")
+                            #     padding: dp(25)
+                            #     keep_ratio: True 
+                            
+                            Widget:
+                                size_hint_y: 0.1
+                                # height: "40dp"
+
+                            MDFillRoundFlatButton:
+                                text: "Submit"
+                                font_size: 15
+                                ripple_scale: .5
+                                size_hint: (0.2,0.1)
+                                pos_hint: {"center_x":0.5}
+                                md_bg_color: get_color_from_hex("#728F9B")
+                                hint_animation: True
+                                # padding: dp(25)
+                                on_press: app.user_authenticate()
+
+                            Widget:
+                                size_hint_y: 0.5
+                    
+                
+                
+                # MDLabel:
+                #     id: skutopia_logo
+                #     halign: "center"
+                # Image:
+                #     source: 'C:/Users/ElakkiyaRaj/0_PoetryProjects/skutopia-aiworkstation/seetopia/resources/img/SKUTOPIA_logo.png'
+                #     keep_ratio: True 
+                #     height: 3 * self.texture_size[1]
+
+       
+                
+
+#########################################################################
+	MDBoxLayout:
+		orientation: 'vertical'
+		canvas:
+			Color:
+                rgba: get_color_from_hex("#E7F1F5")
+			Rectangle:
+				pos: self.pos
+				size: self.size
+		Label:
+			text: 'page 2'
+		AsyncImage:
+			source: 'http://kivy.org/logos/kivy-logo-black-64.png'
+
+# ##########################################################################
+# 	GridLayout:
+# 		canvas:
+# 			Color:
+# 				rgba: 37 / 255., 39 / 255., 30 / 255., 1
+# 			Rectangle:
+# 				pos: self.pos
+# 				size: self.size
+# 		cols: 2
+# 		Label:
+# 			text: 'page 3'
+# 		AsyncImage:
+# 			source: 'http://kivy.org/slides/kivyandroid-thumb.jpg'
+# 		Button:
+# 			text: 'Its User:):)'
+# 			on_press: print("Heloo User This is the Last Page")
+# 		AsyncImage:
+# 			source: 'http://kivy.org/slides/kivypictures-thumb.jpg'
+

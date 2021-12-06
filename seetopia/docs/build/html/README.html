@@ -1,0 +1,303 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="python" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>SEETopia AI Workstation &mdash; QA App Station 0.0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="QA App Station (Kivy) package" href="modules.html" />
+    <link rel="prev" title="Welcome to QA App Station&#39;s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> QA App Station
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">SEETopia AI Workstation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#python-modules-dependencies">Python modules (Dependencies)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#installing-qa-app">Installing QA APP</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#poetry-installation">Poetry Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-dependencies">Install Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#to-run-the-desktop-application">To run the desktop application</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">QA App Station (Kivy) package</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">QA App Station</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>SEETopia AI Workstation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/readme.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="seetopia-ai-workstation">
+<h1>SEETopia AI Workstation<a class="headerlink" href="#seetopia-ai-workstation" title="Permalink to this headline">¶</a></h1>
+<p>SEETopia is a Computer vision enabled deep learning based desktop application that allows warehouse staffs to do assisted quality assurance.:</p>
+<p>The following functionalities are included in this application.</p>
+<ul class="simple">
+<li><p>Barcode scanning and decoding (supports EAN13 and QR codes. Can be extended to other barcode types)</p></li>
+<li><p>Measure length, width and depth of an object</p></li>
+<li><p>Send and receive real time update from WMS (in progress)</p></li>
+<li><p>Feature extraction based object detection (in progress)</p></li>
+<li><p>Deep learning based object detection (in progress)</p></li>
+<li><p>Kalman filtering based object tracker(in progress)</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="prerequisites">
+<h1>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h1>
+<p>Before you begin, ensure you have met the following requirements:</p>
+<ul class="simple">
+<li><p>You have installed the latest version of python 3.7+</p></li>
+<li><p>You have a Windows/Mac machine.</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="python-modules-dependencies">
+<h1>Python modules (Dependencies)<a class="headerlink" href="#python-modules-dependencies" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://numpy.org/">numpy</a></p></li>
+<li><p><a class="reference external" href="https://pypi.org/project/opencv-python/">opencv-python</a></p></li>
+<li><p><a class="reference external" href="https://github.com/luxonis/depthai-python">depthai</a></p></li>
+<li><p><a class="reference external" href="https://kivy.org/doc/stable/gettingstarted/installation.html">kivy</a></p></li>
+<li><p><a class="reference external" href="https://hydra.cc/docs/intro/">hydra</a></p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="installing-qa-app">
+<h1>Installing QA APP<a class="headerlink" href="#installing-qa-app" title="Permalink to this headline">¶</a></h1>
+<p>To get the latest versions of these packages you need for the program, use <a class="reference external" href="https://python-poetry.org/docs/">poetry</a>.</p>
+<div class="section" id="poetry-installation">
+<h2>Poetry Installation<a class="headerlink" href="#poetry-installation" title="Permalink to this headline">¶</a></h2>
+<p>On osx install poetry from python package manager and add poetry's bin direction to your path.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">sSL</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">raw</span><span class="o">.</span><span class="n">githubusercontent</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">python</span><span class="o">-</span><span class="n">poetry</span><span class="o">/</span><span class="n">poetry</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">get</span><span class="o">-</span><span class="n">poetry</span><span class="o">.</span><span class="n">py</span> <span class="o">|</span> <span class="n">python</span>
+</pre></div>
+</div>
+<p>or use brew</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">poetry</span>
+</pre></div>
+</div>
+<p>On Windows install poetry and add poetry's bin direction to your path.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">Invoke</span><span class="o">-</span><span class="n">WebRequest</span> <span class="o">-</span><span class="n">Uri</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">raw</span><span class="o">.</span><span class="n">githubusercontent</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">python</span><span class="o">-</span><span class="n">poetry</span><span class="o">/</span><span class="n">poetry</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">get</span><span class="o">-</span><span class="n">poetry</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">UseBasicParsing</span><span class="p">)</span><span class="o">.</span><span class="n">Content</span> <span class="o">|</span> <span class="n">python</span>
+</pre></div>
+</div>
+<p>or use pip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">poetry</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="install-dependencies">
+<h2>Install Dependencies<a class="headerlink" href="#install-dependencies" title="Permalink to this headline">¶</a></h2>
+<p>To install the project dependencies use poetry, navigate to the <code class="docutils literal notranslate"><span class="pre">seetopia</span></code> directory and execute the following command</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">poetry</span> <span class="n">install</span>
+</pre></div>
+</div>
+<p>This will create a new virtual environment, store it in the cache directory, and display a randomly generated name for the virtual environment.</p>
+<p>The virtual environment will be created here</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Unix</span><span class="p">:</span> <span class="o">~/.</span><span class="n">cache</span><span class="o">/</span><span class="n">pypoetry</span><span class="o">/</span><span class="n">virtualenvs</span>
+<span class="n">MacOS</span><span class="p">:</span> <span class="o">~/</span><span class="n">Library</span><span class="o">/</span><span class="n">Caches</span><span class="o">/</span><span class="n">pypoetry</span><span class="o">/</span><span class="n">virtualenvs</span>
+<span class="n">Windows</span><span class="p">:</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="o">&lt;</span><span class="n">username</span><span class="o">&gt;</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">pypoetry</span>\<span class="n">Cache</span>\<span class="n">virtualenvs</span> <span class="ow">or</span> <span class="o">%</span><span class="n">LOCALAPPDATA</span><span class="o">%</span>\<span class="n">pypoetry</span>\<span class="n">Cache</span>\<span class="n">virtualenvs</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="to-run-the-desktop-application">
+<h2>To run the desktop application<a class="headerlink" href="#to-run-the-desktop-application" title="Permalink to this headline">¶</a></h2>
+<p>From the <code class="docutils literal notranslate"><span class="pre">seetopia</span></code> directory, make sure the correct virtual environment is activated by executing the below commmand.
+(This will output the name of the environment created in the above step)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">poetry</span> <span class="n">env</span> <span class="n">use</span> <span class="n">python</span>
+</pre></div>
+</div>
+<p>After activating the correct environment,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">poetry</span> <span class="n">run</span> <span class="n">python</span> <span class="n">src</span><span class="o">/</span><span class="n">kivy_qa_app</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="modules.html" class="btn btn-neutral float-right" title="QA App Station (Kivy) package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to QA App Station&#39;s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Elakkiya.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+driver: oakd
+custom_calib_fpath: "resources/default.calib"
+left_mesh_fpath: "resources/calib/mesh_left.calib"
+right_mesh_fpath: "resources/calib/mesh_right.calib"
+right_map_x_fpath: "resources/calib/map_x_right.calib"
+right_map_y_fpath: "resources/calib/map_y_right.calib"
+left_map_x_fpath: "resources/calib/map_x_left.calib"
+left_map_y_fpath: "resources/calib/map_y_left.calib"
+interleaved_color_cam: False
+output_depth_stereo: True
+thres_conf_stereo: 255
+thres_conf_spatial: 0.5
+blocking_spatial: False
+bb_scale_factor_spatial: 0.5
+depth_low_thres_spatial: 100
+depth_high_thres_spatial: 5000
+out_queue_blocking: False
+out_queue_max_size: 4
+base_depth: 57 #53
+syncnn: True
+full_frame_tracking: False

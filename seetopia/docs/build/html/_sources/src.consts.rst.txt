@@ -1,0 +1,8 @@
+Resourse Paths
+--------------
+
+.. automodule:: src.consts.resource_paths
+   :members:
+   :undoc-members:
+   :show-inheritance:
+

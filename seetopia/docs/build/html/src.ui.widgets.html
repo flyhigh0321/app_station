@@ -1,0 +1,378 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="python" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Custom popup &mdash; QA App Station 0.0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="DepthAI Core" href="src.core.html" />
+    <link rel="prev" title="Main Screen" href="src.ui.screens.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> QA App Station
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="readme.html">SEETopia AI Workstation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html#python-modules-dependencies">Python modules (Dependencies)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html#installing-qa-app">Installing QA APP</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">QA App Station (Kivy) package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="src.html">Kivy QAApp</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="src.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="src.utils.html">Utils</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="src.ui.html">Kivy UI</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="src.ui.html#screens">Screens</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="src.ui.html#widgets">Widgets</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="src.core.html">DepthAI Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.conf.html">Hydra Configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">QA App Station</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">QA App Station (Kivy) package</a> &raquo;</li>
+        
+          <li><a href="src.html">Kivy QAApp</a> &raquo;</li>
+        
+          <li><a href="src.ui.html">Kivy UI</a> &raquo;</li>
+        
+      <li>Custom popup</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/src.ui.widgets.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-src.ui.widgets.barcode_popup">
+<span id="custom-popup"></span><h1>Custom popup<a class="headerlink" href="#module-src.ui.widgets.barcode_popup" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.ui.widgets.barcode_popup.BarcodePopup">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">src.ui.widgets.barcode_popup.</span></span><span class="sig-name descname"><span class="pre">BarcodePopup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.widgets.barcode_popup.BarcodePopup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">kivy.uix.popup.Popup</span></code></p>
+<p>Creates modal popups. Any click outside the window will
+deactivate the popup.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The default size of a Widget is size_hint=(1, 1).
+The size of the popup can be controlled by changing the
+values of <code class="docutils literal notranslate"><span class="pre">size_hint</span></code> (for instance size_hint=(.8, .8)) or
+by deactivating the size_hint and instead using fixed size attributes.</p>
+<p><code class="docutils literal notranslate"><span class="pre">text</span></code> and <code class="docutils literal notranslate"><span class="pre">title</span></code> of the popup can be customised with the
+current configuration.</p>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ui.widgets.barcode_popup.BarcodePopup.text">
+<span class="sig-name descname"><span class="pre">text</span></span><a class="headerlink" href="#src.ui.widgets.barcode_popup.BarcodePopup.text" title="Permalink to this definition">¶</a></dt>
+<dd><p>StringProperty(defaultvalue=u'', <a href="#id1"><span class="problematic" id="id2">**</span></a>kw)
+Property that represents a string value.</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><cite>defaultvalue</cite>: string, defaults to ''</dt><dd><p>Specifies the default value of the property.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ui.widgets.barcode_popup.BarcodePopup.title">
+<span class="sig-name descname"><span class="pre">title</span></span><a class="headerlink" href="#src.ui.widgets.barcode_popup.BarcodePopup.title" title="Permalink to this definition">¶</a></dt>
+<dd><p>String that represents the title of the popup.</p>
+<p><a class="reference internal" href="#src.ui.widgets.barcode_popup.BarcodePopup.title" title="src.ui.widgets.barcode_popup.BarcodePopup.title"><code class="xref py py-attr docutils literal notranslate"><span class="pre">title</span></code></a> is a <code class="xref py py-class docutils literal notranslate"><span class="pre">StringProperty</span></code> and defaults to
+'No title'.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-src.ui.widgets.custom_input_field">
+<span id="custom-input-field"></span><h1>Custom input field<a class="headerlink" href="#module-src.ui.widgets.custom_input_field" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.ui.widgets.custom_input_field.CustomInputField">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">src.ui.widgets.custom_input_field.</span></span><span class="sig-name descname"><span class="pre">CustomInputField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.widgets.custom_input_field.CustomInputField" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">kivymd.uix.textfield.MDTextField</span></code></p>
+<p>An instance of <a class="reference external" href="https://kivy.org/doc/stable/api-kivy.uix.textinput.html#">kivy.uix.textinput</a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>MDTextField inherited from <code class="docutils literal notranslate"><span class="pre">TextInput</span></code>. Therefore, most parameters
+and all events of the <code class="docutils literal notranslate"><span class="pre">TextInput</span></code> class are also available in the
+<code class="docutils literal notranslate"><span class="pre">MDTextField</span></code> class.</p>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="module-src.ui.widgets.custom_snack_bar">
+<span id="custom-snack-bar"></span><h1>Custom snack bar<a class="headerlink" href="#module-src.ui.widgets.custom_snack_bar" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.ui.widgets.custom_snack_bar.CustomSnackbar">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">src.ui.widgets.custom_snack_bar.</span></span><span class="sig-name descname"><span class="pre">CustomSnackbar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.widgets.custom_snack_bar.CustomSnackbar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">kivymd.uix.snackbar.BaseSnackbar</span></code></p>
+<p>Provides brief messages, similar to flash cards</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">text</span></code>, <code class="docutils literal notranslate"><span class="pre">icon</span></code> and <code class="docutils literal notranslate"><span class="pre">font_size</span></code> of the snackbar
+can be customised with the current configuration.</p>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ui.widgets.custom_snack_bar.CustomSnackbar.font_size">
+<span class="sig-name descname"><span class="pre">font_size</span></span><a class="headerlink" href="#src.ui.widgets.custom_snack_bar.CustomSnackbar.font_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>NumericProperty(defaultvalue=0, <a href="#id3"><span class="problematic" id="id4">**</span></a>kw)
+Property that represents a numeric value.</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><cite>defaultvalue</cite>: int or float, defaults to 0</dt><dd><p>Specifies the default value of the property.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wid</span> <span class="o">=</span> <span class="n">Widget</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">wid</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">wid</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
+<span class="go">42</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">wid</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;plop&quot;</span>
+<span class="go"> Traceback (most recent call last):</span>
+<span class="go">   File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;</span>
+<span class="go">   File &quot;properties.pyx&quot;, line 93, in kivy.properties.Property.__set__</span>
+<span class="go">   File &quot;properties.pyx&quot;, line 111, in kivy.properties.Property.set</span>
+<span class="go">   File &quot;properties.pyx&quot;, line 159, in kivy.properties.NumericProperty.check</span>
+<span class="go"> ValueError: NumericProperty accept only int/float</span>
+</pre></div>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 1.4.1: </span>NumericProperty can now accept custom text and tuple value to indicate a
+type, like &quot;in&quot;, &quot;pt&quot;, &quot;px&quot;, &quot;cm&quot;, &quot;mm&quot;, in the format: '10pt' or (10,
+'pt').</p>
+</div>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ui.widgets.custom_snack_bar.CustomSnackbar.icon">
+<span class="sig-name descname"><span class="pre">icon</span></span><a class="headerlink" href="#src.ui.widgets.custom_snack_bar.CustomSnackbar.icon" title="Permalink to this definition">¶</a></dt>
+<dd><p>StringProperty(defaultvalue=u'', <a href="#id5"><span class="problematic" id="id6">**</span></a>kw)
+Property that represents a string value.</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><cite>defaultvalue</cite>: string, defaults to ''</dt><dd><p>Specifies the default value of the property.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ui.widgets.custom_snack_bar.CustomSnackbar.text">
+<span class="sig-name descname"><span class="pre">text</span></span><a class="headerlink" href="#src.ui.widgets.custom_snack_bar.CustomSnackbar.text" title="Permalink to this definition">¶</a></dt>
+<dd><p>StringProperty(defaultvalue=u'', <a href="#id7"><span class="problematic" id="id8">**</span></a>kw)
+Property that represents a string value.</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><cite>defaultvalue</cite>: string, defaults to ''</dt><dd><p>Specifies the default value of the property.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="src.core.html" class="btn btn-neutral float-right" title="DepthAI Core" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="src.ui.screens.html" class="btn btn-neutral float-left" title="Main Screen" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Elakkiya.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

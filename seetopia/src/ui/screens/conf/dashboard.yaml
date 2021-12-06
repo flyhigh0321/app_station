@@ -1,0 +1,346 @@
+scan:
+  title:
+    id: scan_status
+    type: label
+    text: Scanned
+    bold: True
+    font_size: 18sp
+    text_color: "gray"
+    pos_hint: {"center_x": 0.62, "center_y": 0.85}
+    success:
+      text_color: "green"
+  icon:
+    id: scan_status_icon
+    type: icon
+    icon: "check-circle"
+    text_color: "gray"
+    pos_hint: {"center_x": 0.55, "center_y": 0.85}
+    success:
+      text_color: "green"
+  product_name:
+    id: product_name
+    type: label
+    text: "Product Name : Sample "
+    bold: False
+    font_size: 15sp
+    pos_hint: {"center_x": 0.62, "center_y": 0.8}
+  product_sku:
+    id: product_sku
+    type: label
+    text: "Product SKU  : Sample "
+    bold: False
+    font_size: 15sp
+    pos_hint: {"center_x": 0.62, "center_y": 0.75}
+  product_image:
+    id: product_image
+    type: image
+    source: "resources/classification_db/mob_images/OAK_AI_Kit_Box.jpg"
+    width: 280dp
+    height: 280dp
+    pos_hint: {"center_x": 0.62, "center_y": 0.75}
+measure:
+  title:
+    id: measure_status
+    type: label
+    default:
+      text: "Measured (cm)"
+      bold: True
+      font_size: 18sp
+      text_color: "gray"
+      pos_hint: {"center_x": 0.62, "center_y": 0.7}
+    lapse:
+      text_color: "red"
+      # text_color: "green"
+    success:
+      text_color: "green"
+  icon:
+    id: measure_status_icon
+    type: icon
+    default:
+      icon: "progress-question"
+      text_color: "gray"
+      pos_hint: {"center_x": 0.55, "center_y": 0.7}
+    lapse:
+      icon: "close-circle"
+      text_color: "red"
+      # text_color: "green"
+      # icon: "check-circle"
+    success:
+      text_color: "green"
+      icon: "check-circle"
+  length_label:
+    id: item_length
+    type: label
+    default:
+      text: "Length: "
+      bold: True
+      text_color: "gray"
+      pos_hint: {"center_x": 0.62, "center_y": 0.65}
+      opacity: 1
+    lapse:
+      text: "Length"
+      bold: True
+      text_color: "black"
+      pos_hint: {"center_x": 0.62, "center_y": 0.66}
+    success:
+      bold: False
+      font_size: "15sp"
+      text_color: "black"
+      pos_hint: {"center_x": 0.62, "center_y": 0.65}
+  length_text_field:
+    id: length_text_field
+    type: tfield
+    default:
+      text: ""
+      opacity: 1
+      mode: none
+      error: False
+    lapse:
+      opacity: 1
+      # disabled: True
+      mode: persistent
+      error: True
+    success:
+      text: ""
+      opacity: 0
+  width_label:
+    id: item_width
+    type: label
+    default:
+      text: "Width: "
+      bold: True
+      text_color: "gray"
+      pos_hint: {"center_x": 0.62, "center_y": 0.60}
+      opacity: 1
+    lapse:
+      text: "Width"
+      bold: True
+      text_color: "black"
+      pos_hint: {"center_x": 0.88, "center_y": 0.66}
+    success:
+      bold: False
+      font_size: "15sp"
+      text_color: "black"
+      pos_hint: {"center_x": 0.62, "center_y": 0.60}
+  width_text_field:
+    id: width_text_field
+    type: tfield
+    default:
+      text: ""
+      opacity: 1
+      mode: none
+      error: False
+    lapse:
+      opacity: 1
+      # disabled: True
+      mode: persistent
+      error: True
+    success:
+      text: ""
+      opacity: 0
+  depth_label:
+    id: item_depth
+    type: label
+    default:
+      text: "Height: "
+      bold: True
+      text_color: "gray"
+      pos_hint: {"center_x": 0.62, "center_y": 0.55}
+      opacity: 1
+    lapse:
+      text: "Height"
+      bold: True
+      text_color: "black"
+      pos_hint: {"center_x": 1.15, "center_y": 0.66}
+    success:
+      bold: False
+      font_size: "15sp"
+      text_color: "black"
+      pos_hint: {"center_x": 0.62, "center_y": 0.55}
+  depth_text_field:
+    id: depth_text_field
+    type: tfield
+    default:
+      text: ""
+      opacity: 1
+      mode: none
+      error: False
+    lapse:
+      opacity: 1
+      # disabled: True
+      # error: False
+      # mode: none
+      mode: persistent
+      error: True
+    success:
+      text: ""
+      opacity: 0
+  # stack:
+  #   id: measure_tfield_stack
+  #   default:
+  #     spacing: [15,15]
+  #     pos_hint: {"center_x": 0.62, "center_y": 0.12}
+weight:
+  title:
+    id: Weight_status
+    type: label
+    default:
+      text: "Weighed (g)"
+      bold: True
+      font_size: 18sp
+      text_color: "gray"
+      pos_hint: 
+        center_x: 0.62
+        center_y: 0.5
+    success:
+      text_color: "green"
+  icon:
+    id: weight_status_icon
+    type: icon
+    default:
+      icon: "progress-question"
+      text_color: "gray"
+      pos_hint: {"center_x": 0.55, "center_y": 0.5}
+      opacity: 0
+    success:
+      text_color: "green"
+      icon: "check-circle"
+      opacity: 1
+  spinner:
+    id: weight_status_spinner
+    type: icon
+    default:
+      pos_hint: {"center_x": 0.062, "center_y": 0.5}
+      opacity: 1
+    success:
+      opacity: 0
+  act_wgt_label:
+    id: actual_weight
+    type: label
+    default:
+      text: "Actual weight  : 450g "
+      bold: False
+      font_size: 15sp
+      text_color: "black"
+      pos_hint: {"center_x": 0.62, "center_y": 0.45}
+      opacity: 0
+    success:
+      opacity: 1
+  exp_wgt_label:
+    id: exp_weight
+    type: label
+    default:
+      text: "Expected weight : 500g "
+      bold: False
+      font_size: 15sp
+      text_color: "black"
+      pos_hint: {"center_x": 0.62, "center_y": 0.4}
+      opacity: 0
+    success:
+      opacity: 1
+  weight_text_field:
+    id: weight_text_field
+    type: tfield
+    default:
+      text: ""
+      hint_text: "Enter measured weight"
+      pos_hint: {"x": 0.12, "center_y": 0.44}
+      opacity: 1
+      # mode: none
+      # error: False
+    success:
+      opacity: 0
+item_cnt:
+  title:
+    id: item_count
+    type: label
+    default:
+      bold: True
+      text_color: "gray"
+      pos_hint: {"center_x": 0.62, "center_y": 0.38}
+      opacity: 1
+    success:
+      opacity: 0
+  item_cnt_text_field:
+    id: count_text_field
+    type: tfield
+    default:
+      text: ""
+      hint_text: "Enter the quantity"
+      pos_hint: {"x": 0.12, "center_y": 0.32}
+      opacity: 1
+      # mode: none
+      # error: False
+    success:
+      opacity: 0
+buttons:
+  id: btn_stack
+  spacing: [25, 25]
+  pos_hint: {"center_x": 0.62, "center_y": 0.22}
+  override_btn:
+    id: value_override
+    type: button
+    default:
+      icon: "circle-edit-outline"
+      text: OVERRIDE
+      line_width: 1.25
+      ripple_scale: 0.5
+      user_font_size: 5sp
+      disabled: False
+      opacity: 1
+    success:
+      opacity: 0
+      disabled: True
+  flag_btn:
+    id: flag_transfer
+    type: button
+    default:
+      icon: "flag-triangle"
+      text: "FLAG        "
+      line_width: 1.25
+      ripple_scale: 0.5
+      disabled: False
+      opacity: 1
+    success:
+      opacity: 0
+      disabled: True
+putaway:
+  title:
+    id: putaway_notice
+    type: label
+    default:
+      text: "Move to Autostore"
+      bold: True
+      font_size: 18sp
+      text_color: "black"
+      pos_hint: {"center_x": 0.62, "center_y": 0.35}
+      opacity: 0
+    success:
+      opacity: 1
+  icon:
+    id: putaway_notice_icon
+    type: icon
+    default:
+      icon: "format-list-bulleted"
+      text_color: "black"
+      pos_hint: {"center_x": 0.55, "center_y": 0.35}
+      opacity: 0
+    success:
+      opacity: 1
+finish_qa_btn:
+  finish_qa_btn:
+    id: putaway_confirm
+    type: button
+    default:
+      icon: check
+      text: DONE
+      line_width: 1.25
+      ripple_scale: 0.5
+      user_font_size: 5sp
+      pos_hint: {"center_x": 0.175, "center_y": 0.28}
+      opacity: 0
+    success:
+      opacity: 1
+
+
+    

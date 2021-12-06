@@ -1,0 +1,51 @@
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+#:import col   ui.config.colors
+<BarcodePopup>:
+    id: barcode_popup
+    icon: 'information'
+    auto_dismiss: True
+    title: "Error"
+    title_size: '26sp'
+    size_hint: 0.3, 0.2
+    title_align: 'center'
+    pos_hint:{"center_x":0.5, "center_y":0.5}
+    separator_color: get_color_from_hex(col['teal']) 
+    background: 'atlas://data/images/defaulttheme/bubble'
+    FloatLayout:
+        Label:
+            id: error_msg
+            size_hint: .9, .9
+            halign: 'left'
+            text: root.text
+            text_size: self.width, None
+            pos_hint:{"center_x":0.48, "center_y":0.8}        
+        Label:
+            id: product_dimensions
+            size_hint: .9, .9
+            halign: 'left'
+            text_size: self.width, None
+            pos_hint:{"center_x":0.48, "center_y":0.60}
+        Label:
+            id: product_weight
+            size_hint: .9, .9
+            halign: 'left'
+            text_size: self.width, None
+            pos_hint:{"center_x":0.48, "center_y":0.45}
+        Label:
+            id: product_quantity
+            size_hint: .9, .9
+            halign: 'left'
+            text_size: self.width, None
+            pos_hint:{"center_x":0.48, "center_y":0.30}
+        MDRaisedButton:
+            text: 'Cancel'
+            on_release: app.popup_dismiss()
+            pos_hint:{"center_x":0.68, "center_y":0.10}
+            md_bg_color: app.theme_cls.primary_light
+            on_release: app.popup_dismiss()
+        MDRaisedButton:
+            text: 'Confirm'
+            on_release: app.popup_dismiss()
+            pos_hint:{"center_x":0.88, "center_y":0.10}
+            md_bg_color: app.theme_cls.primary_dark
+            on_press: app.confirm_override()

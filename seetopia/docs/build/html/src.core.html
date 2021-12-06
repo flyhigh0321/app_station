@@ -1,0 +1,484 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="python" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>DepthAI Core &mdash; QA App Station 0.0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Hydra Configuration" href="src.conf.html" />
+    <link rel="prev" title="Custom popup" href="src.ui.widgets.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> QA App Station
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="src.html">QA App Station (Kivy) package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="src.html#module-src.qa_app_demo">Kivy QAApp</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="src.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="src.utils.html">Utils</a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.ui.html">Kivy UI</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">DepthAI Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.conf.html">Hydra Configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">QA App Station</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="src.html">QA App Station (Kivy) package</a> &raquo;</li>
+        
+      <li>DepthAI Core</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/src.core.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-src.core.oak_pipeline">
+<span id="depthai-core"></span><h1>DepthAI Core<a class="headerlink" href="#module-src.core.oak_pipeline" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.core.oak_pipeline.OakPipeline">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">src.core.oak_pipeline.</span></span><span class="sig-name descname"><span class="pre">OakPipeline</span></span><a class="headerlink" href="#src.core.oak_pipeline.OakPipeline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Creates a <a class="reference external" href="https://docs.luxonis.com/projects/api/en/latest/references/python/#depthai.Pipeline">depthai.Pipeline</a> object which represents
+a pipeline, set of nodes and connections between them.</p>
+<p>Currently, <code class="docutils literal notranslate"><span class="pre">color_Cam</span></code>, <code class="docutils literal notranslate"><span class="pre">mono_left</span></code>, <code class="docutils literal notranslate"><span class="pre">mono_right</span></code> and <code class="docutils literal notranslate"><span class="pre">stereo</span></code>
+nodes are configured. More details about the configured nodes can be
+found in the <a class="reference external" href="https://miro.com/welcomeonboard/TlJhTkZINVJkbVBVMkd0Z2NGWWowcDVjRmxYaDdHVTRYNGFnaUxESGozZTlRT0k5Y3UzbDJpNU1abVBZa3RWZ3wzMDc0NDU3MzUyMTgzMjQ1MjA0">Miro board</a>.</p>
+<p>Default configurations are loaded from <a class="reference internal" href="src.conf.html#src.conf.config.CvConfig" title="src.conf.config.CvConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.conf.config.CvConfig</span></code></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Nodes are the building blocks when populating the Pipeline. Each node
+provides a specific functionality on the DepthaI, a set of configurable
+properties and inputs/outputs. After creating a node on a pipeline, it
+is possible to configure it as desired and link it to other nodes.</p>
+<p>Pipeline is a collection of nodes and links between them. This flow
+provides extensive flexibility from DepthAI camera.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nn_family</strong> (<em>string</em>) -- Type of neural network used. Currently <code class="docutils literal notranslate"><span class="pre">mobilenet</span></code> is used.</p></li>
+<li><p><strong>img_frame</strong> (<em>np array</em>) -- Its initialised to a np array of 300x300 zeros.During run time, it points
+to input image of size (300,300)</p></li>
+<li><p><strong>ORB</strong> (<a class="reference internal" href="src.utils.html#src.utils.utils.FeatureExtraction" title="src.utils.utils.FeatureExtraction"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.utils.utils.FeatureExtraction</span></code></a>) -- An instance of <a class="reference internal" href="src.utils.html#src.utils.utils.FeatureExtraction" title="src.utils.utils.FeatureExtraction"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.utils.utils.FeatureExtraction</span></code></a>  performs feature
+matching using ORB feature detection which consists of three steps, feature
+point extraction, generating feature point descriptors and feature point
+matching.</p></li>
+<li><p><strong>label_map</strong> (<em>list</em>) -- List of output labels for the model</p></li>
+<li><p><strong>nn_blob_path</strong> -- path to the saved model (openvino model format)</p></li>
+<li><p><strong>threshold1</strong> (<em>int</em>) -- Minimum threshold value used for canny edge detection</p></li>
+<li><p><strong>threshold2</strong> (<em>int</em>) -- Maximum threshold value used for canny edge detection</p></li>
+<li><p><strong>area_min</strong> (<em>int</em>) -- Area threshold used for contour filtering</p></li>
+<li><p><strong>base_depth</strong> (<em>int</em>) -- Distance between the camera module and flat surface on which the objects
+are placed.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.core.oak_pipeline.OakPipeline.calc_fps">
+<span class="sig-name descname"><span class="pre">calc_fps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">counter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_time</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.core.oak_pipeline.OakPipeline.calc_fps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the frames per second by dividing the total number of
+rendered frames by elapsed time</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>counter</strong> (<em>int</em>) -- Number of rendered frames</p></li>
+<li><p><strong>start_time</strong> (<em>time</em>) -- Time when the first frame was streamed</p></li>
+<li><p><strong>current_time</strong> (<em>time</em>) -- Time when the current frame is streamed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Frames per seconds value</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.core.oak_pipeline.OakPipeline.create_color_cam">
+<span class="sig-name descname"><span class="pre">create_color_cam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pipeline</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.core.oak_pipeline.OakPipeline.create_color_cam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a <code class="docutils literal notranslate"><span class="pre">color_cam</span></code> node, configures the newly created node
+and populates it with existing nodes in  <code class="docutils literal notranslate"><span class="pre">depthai</span> <span class="pre">pipeline</span></code> after
+establishing connection between them.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">color_Cam</span></code> node receives the input frame from the main RGB cam
+in the oak cam and transmit the frames to the connected device
+through the <code class="docutils literal notranslate"><span class="pre">XLinkOut</span></code> channel.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nodes</strong> -- Existing nodes in the current pipeline</p></li>
+<li><p><strong>pipeline</strong> -- Set of all the nodes and the links between them</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>nodes</em> -- Updated nodes with <code class="docutils literal notranslate"><span class="pre">color_cam</span></code> node added to it</p></li>
+<li><p><em>pipeline</em> -- Updated depthai nodes and links in the form of a pipeline</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.core.oak_pipeline.OakPipeline.create_left_cam">
+<span class="sig-name descname"><span class="pre">create_left_cam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pipeline</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.core.oak_pipeline.OakPipeline.create_left_cam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a <code class="docutils literal notranslate"><span class="pre">mono_left</span></code> node, configures the newly created node
+and populate it with existing nodes in  <code class="docutils literal notranslate"><span class="pre">depthai</span> <span class="pre">pipeline</span></code> after
+establishing connection between them.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">mono_left</span></code> node receives the input frame from the left mono cam
+in the oak cam and transmit the frames to the connected device
+through the <code class="docutils literal notranslate"><span class="pre">XLinkOut</span></code> channel.</p>
+<p>Please note that the output link of this node is also connected
+with the <code class="docutils literal notranslate"><span class="pre">nodes.stereo.left</span></code></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nodes</strong> -- Existing nodes in the current pipeline</p></li>
+<li><p><strong>pipeline</strong> -- Set of all the nodes and the links between them</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>nodes</em> -- Updated nodes with <code class="docutils literal notranslate"><span class="pre">mono_left</span></code> node added to it</p></li>
+<li><p><em>pipeline</em> -- Updated depthai nodes and links in the form of a pipeline</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.core.oak_pipeline.OakPipeline.create_nn_pipeline">
+<span class="sig-name descname"><span class="pre">create_nn_pipeline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pipeline</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.core.oak_pipeline.OakPipeline.create_nn_pipeline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a <code class="docutils literal notranslate"><span class="pre">createMobileNetSpatialDetectionNetwork</span></code> node,
+configures the newly created node and populates it with existing
+nodes in  <code class="docutils literal notranslate"><span class="pre">depthai</span> <span class="pre">pipeline</span></code> after establishing connection
+between them.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A <code class="docutils literal notranslate"><span class="pre">stereo</span></code> node is also created and connected with the
+<code class="docutils literal notranslate"><span class="pre">nn</span></code> node. Please note that different <code class="docutils literal notranslate"><span class="pre">nn</span></code> are required for
+differnt family of models.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nodes</strong> -- Existing nodes in the current pipeline</p></li>
+<li><p><strong>pipeline</strong> -- Set of all the nodes and the links between them</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>nodes</em> -- Updated nodes with <code class="docutils literal notranslate"><span class="pre">nn</span></code> node added to it</p></li>
+<li><p><em>pipeline</em> -- Updated depthai nodes and links in the form of a pipeline</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.core.oak_pipeline.OakPipeline.create_right_cam">
+<span class="sig-name descname"><span class="pre">create_right_cam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pipeline</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.core.oak_pipeline.OakPipeline.create_right_cam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a <code class="docutils literal notranslate"><span class="pre">mono_right</span></code> node, configures the newly created node
+and populate it with existing nodes in  <code class="docutils literal notranslate"><span class="pre">depthai</span> <span class="pre">pipeline</span></code> after
+establishing connection between them.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">mono_right</span></code> node receives the input frame from the right mono cam
+in the oak cam and transmit the frames to the connected device
+through the <code class="docutils literal notranslate"><span class="pre">XLinkOut</span></code> channel.</p>
+<p>Please note that the output link of this node is also connected
+with the <code class="docutils literal notranslate"><span class="pre">nodes.stereo.right</span></code></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nodes</strong> -- Existing nodes in the current pipeline</p></li>
+<li><p><strong>pipeline</strong> -- Set of all the nodes and the links between them</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>nodes</em> -- Updated nodes with <code class="docutils literal notranslate"><span class="pre">mono_right</span></code> node added to it</p></li>
+<li><p><em>pipeline</em> -- Updated depthai nodes and links in the form of a pipeline</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.core.oak_pipeline.OakPipeline.decode_barcode">
+<span class="sig-name descname"><span class="pre">decode_barcode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">draw</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.core.oak_pipeline.OakPipeline.decode_barcode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Detects barcode from the given frame and decodes it using
+<a class="reference external" href="https://pypi.org/project/pyzbar/pyzbar">pyzbarpyzbar</a>. It also possible to detect and decode more than
+one barcode in the given frame.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Currently <code class="docutils literal notranslate"><span class="pre">QRcode</span></code> and <code class="docutils literal notranslate"><span class="pre">EAN13</span></code> are supported. More barcode
+types can be added if required.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyzbar</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span>
+<span class="go">        frame,</span>
+<span class="go">        symbols=[</span>
+<span class="go">            pyzbar.ZBarSymbol.QRCODE,</span>
+<span class="go">            pyzbar.ZBarSymbol.EAN13,</span>
+<span class="go">        ],</span>
+<span class="go">    )</span>
+</pre></div>
+</div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>frame</strong> -- Current frame transmitted from oak cam module</p></li>
+<li><p><strong>draw</strong> (<em>bool</em><em>, </em><em>optional</em>) -- If <code class="docutils literal notranslate"><span class="pre">True</span></code>, it writes the decoded barcode info on the
+given frame, by default False</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>string</em> -- Decoded barcode value</p></li>
+<li><p><em>string</em> -- Decoded barcode type</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.core.oak_pipeline.OakPipeline.draw_measurements">
+<span class="sig-name descname"><span class="pre">draw_measurements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detections</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object_depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">draw</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.core.oak_pipeline.OakPipeline.draw_measurements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Preprocess a given frame  Input image is converted to gray
+scale, gaussian blur, canny edge detection. dilation and erosion are performed
+in the given order before finding contours using <a class="reference external" href="https://docs.opencv.org/3.4/d3/dc0/group__imgproc__shape.html#ga17ed9f5d79ae97bd4c7cf18403e1689a">cv2.findContours()</a></p>
+<p>Rotated bounding box on all the objects that matches the <code class="docutils literal notranslate"><span class="pre">min_area</span></code> are fetched
+from  <a class="reference internal" href="src.utils.html#src.utils.utils.get_bounding_rect" title="src.utils.utils.get_bounding_rect"><code class="xref py py-func docutils literal notranslate"><span class="pre">src.utils.utils.get_bounding_rect()</span></code></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Currently bounding box is drawn for all the objects with matches the <code class="docutils literal notranslate"><span class="pre">min_area</span></code>
+contour criteria. Function can be modified to draw bounding boxes only for the
+detected objects from the <code class="docutils literal notranslate"><span class="pre">nn</span></code> node.</p>
+<p>However, <code class="docutils literal notranslate"><span class="pre">depth</span></code> is estimated only for the objects detected by the <code class="docutils literal notranslate"><span class="pre">nn</span></code> node.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>frame</strong> -- Current frame transmitted from the oak cam module</p></li>
+<li><p><strong>detections</strong> (<em>list</em>) -- List of four corner points detected by the <a class="reference internal" href="#src.core.oak_pipeline.OakPipeline.create_nn_pipeline" title="src.core.oak_pipeline.OakPipeline.create_nn_pipeline"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_nn_pipeline()</span></code></a></p></li>
+<li><p><strong>object_depth</strong> (<em>int</em><em>, </em><em>optional</em>) -- Measured depth of the object from <a class="reference internal" href="#src.core.oak_pipeline.OakPipeline.create_nn_pipeline" title="src.core.oak_pipeline.OakPipeline.create_nn_pipeline"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_nn_pipeline()</span></code></a>,
+by default 0</p></li>
+<li><p><strong>draw</strong> (<em>bool</em><em>, </em><em>optional</em>) -- If <code class="docutils literal notranslate"><span class="pre">True</span></code> writes the depth value of an object on the current
+frame, by default True</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>img</em> -- Processed frame with bounding bax and depth values written</p></li>
+<li><p><em>dict</em> -- Dimensions of the object (length,width,depth)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="src.conf.html" class="btn btn-neutral float-right" title="Hydra Configuration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="src.ui.widgets.html" class="btn btn-neutral float-left" title="Custom popup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Elakkiya.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

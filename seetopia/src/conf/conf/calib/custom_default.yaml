@@ -1,0 +1,9 @@
+# @package _group_
+driver: customcam
+custom_calib_fpath: "resources/default.calib"
+left_mesh_fpath: "resources/calib/mesh_left.calib"
+right_mesh_fpath: "resources/calib/mesh_right.calib"
+right_map_x_fpath: "resources/calib/map_x_right.calib"
+right_map_y_fpath: "resources/calib/map_y_right.calib"
+left_map_x_fpath: "resources/calib/map_x_left.calib"
+left_map_y_fpath: "resources/calib/map_y_left.calib"

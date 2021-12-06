@@ -1,0 +1,691 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="python" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Hydra Configuration &mdash; QA App Station 0.0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="DepthAI Core" href="src.core.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> QA App Station
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="readme.html">SEETopia AI Workstation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html#python-modules-dependencies">Python modules (Dependencies)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html#installing-qa-app">Installing QA APP</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">QA App Station (Kivy) package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="src.html">Kivy QAApp</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="src.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="src.utils.html">Utils</a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.ui.html">Kivy UI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.core.html">DepthAI Core</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Hydra Configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">QA App Station</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">QA App Station (Kivy) package</a> &raquo;</li>
+        
+          <li><a href="src.html">Kivy QAApp</a> &raquo;</li>
+        
+      <li>Hydra Configuration</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/src.conf.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-src.conf.config">
+<span id="hydra-configuration"></span><h1>Hydra Configuration<a class="headerlink" href="#module-src.conf.config" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.conf.config.CalibConfig">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">src.conf.config.</span></span><span class="sig-name descname"><span class="pre">CalibConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">left_mesh_fpath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right_mesh_fpath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right_map_x_fpath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right_map_y_fpath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">left_map_x_fpath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">left_map_y_fpath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.conf.config.CalibConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Please refer to <a class="reference external" href="https://docs.python.org/3.7/library/dataclasses.html">Hydra dataclass</a> for more details</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Assign MISSING to a field to indicates that it does not have a default value.
+This is equivalent to the ??? literal we have seen in OmegaConf configs before.</p>
+<p>Omitting a default value is equivalent to assigning MISSING to it, although it is
+sometimes convenient to be able to assign MISSING it to a field.</p>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.CalibConfig.driver">
+<span class="sig-name descname"><span class="pre">driver</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.CalibConfig.driver" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.CalibConfig.left_map_x_fpath">
+<span class="sig-name descname"><span class="pre">left_map_x_fpath</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.CalibConfig.left_map_x_fpath" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.CalibConfig.left_map_y_fpath">
+<span class="sig-name descname"><span class="pre">left_map_y_fpath</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.CalibConfig.left_map_y_fpath" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.CalibConfig.left_mesh_fpath">
+<span class="sig-name descname"><span class="pre">left_mesh_fpath</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.CalibConfig.left_mesh_fpath" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.CalibConfig.right_map_x_fpath">
+<span class="sig-name descname"><span class="pre">right_map_x_fpath</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.CalibConfig.right_map_x_fpath" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.CalibConfig.right_map_y_fpath">
+<span class="sig-name descname"><span class="pre">right_map_y_fpath</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.CalibConfig.right_map_y_fpath" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.CalibConfig.right_mesh_fpath">
+<span class="sig-name descname"><span class="pre">right_mesh_fpath</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.CalibConfig.right_mesh_fpath" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="src.conf.config.Config">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">src.conf.config.</span></span><span class="sig-name descname"><span class="pre">Config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#src.conf.config.ModelConfig" title="src.conf.config.ModelConfig"><span class="pre">src.conf.config.ModelConfig</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calib</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#src.conf.config.CalibConfig" title="src.conf.config.CalibConfig"><span class="pre">src.conf.config.CalibConfig</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#src.conf.config.DbConfig" title="src.conf.config.DbConfig"><span class="pre">src.conf.config.DbConfig</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cv</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#src.conf.config.CvConfig" title="src.conf.config.CvConfig"><span class="pre">src.conf.config.CvConfig</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.conf.config.Config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.Config.calib">
+<span class="sig-name descname"><span class="pre">calib</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="#src.conf.config.CalibConfig" title="src.conf.config.CalibConfig"><span class="pre">src.conf.config.CalibConfig</span></a></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.Config.calib" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.Config.cv">
+<span class="sig-name descname"><span class="pre">cv</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="#src.conf.config.CvConfig" title="src.conf.config.CvConfig"><span class="pre">src.conf.config.CvConfig</span></a></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.Config.cv" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.Config.db">
+<span class="sig-name descname"><span class="pre">db</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="#src.conf.config.DbConfig" title="src.conf.config.DbConfig"><span class="pre">src.conf.config.DbConfig</span></a></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.Config.db" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.Config.model">
+<span class="sig-name descname"><span class="pre">model</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="#src.conf.config.ModelConfig" title="src.conf.config.ModelConfig"><span class="pre">src.conf.config.ModelConfig</span></a></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.Config.model" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="src.conf.config.CustomCamConfig">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">src.conf.config.</span></span><span class="sig-name descname"><span class="pre">CustomCamConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'customcam'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">left_mesh_fpath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right_mesh_fpath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right_map_x_fpath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right_map_y_fpath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">left_map_x_fpath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">left_map_y_fpath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_calib_fpath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.conf.config.CustomCamConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#src.conf.config.CalibConfig" title="src.conf.config.CalibConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.conf.config.CalibConfig</span></code></a></p>
+<p>Loads <code class="docutils literal notranslate"><span class="pre">customcam</span></code> camera config</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.CustomCamConfig.custom_calib_fpath">
+<span class="sig-name descname"><span class="pre">custom_calib_fpath</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.CustomCamConfig.custom_calib_fpath" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.CustomCamConfig.driver">
+<span class="sig-name descname"><span class="pre">driver</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'customcam'</span></em><a class="headerlink" href="#src.conf.config.CustomCamConfig.driver" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="src.conf.config.CvConfig">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">src.conf.config.</span></span><span class="sig-name descname"><span class="pre">CvConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resize_window_min</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resize_window_max</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">area_min</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">area_max</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thres_min</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thres_max</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thres_limit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.conf.config.CvConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Loads the computer vision configurations for object measurement
+based on the <code class="docutils literal notranslate"><span class="pre">driver</span></code> name in runtime</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.CvConfig.area_max">
+<span class="sig-name descname"><span class="pre">area_max</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.CvConfig.area_max" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.CvConfig.area_min">
+<span class="sig-name descname"><span class="pre">area_min</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.CvConfig.area_min" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.CvConfig.driver">
+<span class="sig-name descname"><span class="pre">driver</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.CvConfig.driver" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.CvConfig.resize_window_max">
+<span class="sig-name descname"><span class="pre">resize_window_max</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.CvConfig.resize_window_max" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.CvConfig.resize_window_min">
+<span class="sig-name descname"><span class="pre">resize_window_min</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.CvConfig.resize_window_min" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.CvConfig.thres_limit">
+<span class="sig-name descname"><span class="pre">thres_limit</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.CvConfig.thres_limit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.CvConfig.thres_max">
+<span class="sig-name descname"><span class="pre">thres_max</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.CvConfig.thres_max" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.CvConfig.thres_min">
+<span class="sig-name descname"><span class="pre">thres_min</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.CvConfig.thres_min" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="src.conf.config.CvCustomConfig">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">src.conf.config.</span></span><span class="sig-name descname"><span class="pre">CvCustomConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'cv_custom_001'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resize_window_min</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resize_window_max</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">area_min</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">area_max</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thres_min</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thres_max</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thres_limit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.conf.config.CvCustomConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#src.conf.config.CvConfig" title="src.conf.config.CvConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.conf.config.CvConfig</span></code></a></p>
+<p>Loads the <code class="docutils literal notranslate"><span class="pre">cv_custom_001</span></code> CV config</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.CvCustomConfig.driver">
+<span class="sig-name descname"><span class="pre">driver</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'cv_custom_001'</span></em><a class="headerlink" href="#src.conf.config.CvCustomConfig.driver" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="src.conf.config.CvDefaultConfig">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">src.conf.config.</span></span><span class="sig-name descname"><span class="pre">CvDefaultConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'cv_default'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resize_window_min</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resize_window_max</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">area_min</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">area_max</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thres_min</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thres_max</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thres_limit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_factor_x</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_factor_y</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kernel_gauss</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iter_gauss</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kernel_dilate</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iter_dilate</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r_color</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g_color</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b_color</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">display</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.conf.config.CvDefaultConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#src.conf.config.CvConfig" title="src.conf.config.CvConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.conf.config.CvConfig</span></code></a></p>
+<p>Loads the <code class="docutils literal notranslate"><span class="pre">cv_default</span></code> CV config</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.CvDefaultConfig.b_color">
+<span class="sig-name descname"><span class="pre">b_color</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.CvDefaultConfig.b_color" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.CvDefaultConfig.debug">
+<span class="sig-name descname"><span class="pre">debug</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.CvDefaultConfig.debug" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.CvDefaultConfig.display">
+<span class="sig-name descname"><span class="pre">display</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.CvDefaultConfig.display" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.CvDefaultConfig.driver">
+<span class="sig-name descname"><span class="pre">driver</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'cv_default'</span></em><a class="headerlink" href="#src.conf.config.CvDefaultConfig.driver" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.CvDefaultConfig.g_color">
+<span class="sig-name descname"><span class="pre">g_color</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.CvDefaultConfig.g_color" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.CvDefaultConfig.iter_dilate">
+<span class="sig-name descname"><span class="pre">iter_dilate</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.CvDefaultConfig.iter_dilate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.CvDefaultConfig.iter_gauss">
+<span class="sig-name descname"><span class="pre">iter_gauss</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.CvDefaultConfig.iter_gauss" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.CvDefaultConfig.kernel_dilate">
+<span class="sig-name descname"><span class="pre">kernel_dilate</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.CvDefaultConfig.kernel_dilate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.CvDefaultConfig.kernel_gauss">
+<span class="sig-name descname"><span class="pre">kernel_gauss</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.CvDefaultConfig.kernel_gauss" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.CvDefaultConfig.r_color">
+<span class="sig-name descname"><span class="pre">r_color</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.CvDefaultConfig.r_color" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.CvDefaultConfig.scale_factor_x">
+<span class="sig-name descname"><span class="pre">scale_factor_x</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.CvDefaultConfig.scale_factor_x" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.CvDefaultConfig.scale_factor_y">
+<span class="sig-name descname"><span class="pre">scale_factor_y</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.CvDefaultConfig.scale_factor_y" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="src.conf.config.DbConfig">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">src.conf.config.</span></span><span class="sig-name descname"><span class="pre">DbConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.conf.config.DbConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Loads the DB configurations for
+based on the <code class="docutils literal notranslate"><span class="pre">driver</span></code> name in runtime</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please note that at the momemt there is no DB
+connections available</p>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.DbConfig.driver">
+<span class="sig-name descname"><span class="pre">driver</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.DbConfig.driver" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="src.conf.config.EfficientNetConfig">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">src.conf.config.</span></span><span class="sig-name descname"><span class="pre">EfficientNetConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'efficientnet'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_map</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blob_fpath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blob_config_fpath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.conf.config.EfficientNetConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#src.conf.config.ModelConfig" title="src.conf.config.ModelConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.conf.config.ModelConfig</span></code></a></p>
+<p>Loads the <code class="docutils literal notranslate"><span class="pre">efficientnet</span></code> model config</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.EfficientNetConfig.blob_config_fpath">
+<span class="sig-name descname"><span class="pre">blob_config_fpath</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.EfficientNetConfig.blob_config_fpath" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.EfficientNetConfig.blob_fpath">
+<span class="sig-name descname"><span class="pre">blob_fpath</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.EfficientNetConfig.blob_fpath" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.EfficientNetConfig.driver">
+<span class="sig-name descname"><span class="pre">driver</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'efficientnet'</span></em><a class="headerlink" href="#src.conf.config.EfficientNetConfig.driver" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="src.conf.config.MobileNetConfig">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">src.conf.config.</span></span><span class="sig-name descname"><span class="pre">MobileNetConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'mobilenetssd'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_map</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blob_fpath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blob_config_fpath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_size_x</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_size_y</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.conf.config.MobileNetConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#src.conf.config.ModelConfig" title="src.conf.config.ModelConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.conf.config.ModelConfig</span></code></a></p>
+<p>Loads the <code class="docutils literal notranslate"><span class="pre">mobilenetssd</span></code> model config</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.MobileNetConfig.blob_config_fpath">
+<span class="sig-name descname"><span class="pre">blob_config_fpath</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.MobileNetConfig.blob_config_fpath" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.MobileNetConfig.blob_fpath">
+<span class="sig-name descname"><span class="pre">blob_fpath</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.MobileNetConfig.blob_fpath" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.MobileNetConfig.driver">
+<span class="sig-name descname"><span class="pre">driver</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'mobilenetssd'</span></em><a class="headerlink" href="#src.conf.config.MobileNetConfig.driver" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.MobileNetConfig.input_size_x">
+<span class="sig-name descname"><span class="pre">input_size_x</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.MobileNetConfig.input_size_x" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.MobileNetConfig.input_size_y">
+<span class="sig-name descname"><span class="pre">input_size_y</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.MobileNetConfig.input_size_y" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="src.conf.config.ModelConfig">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">src.conf.config.</span></span><span class="sig-name descname"><span class="pre">ModelConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_map</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.conf.config.ModelConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Loads the deep learning model configurations based on the
+<code class="docutils literal notranslate"><span class="pre">driver</span></code> name in runtime</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.ModelConfig.driver">
+<span class="sig-name descname"><span class="pre">driver</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.ModelConfig.driver" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.ModelConfig.label_map">
+<span class="sig-name descname"><span class="pre">label_map</span></span><em class="property"><span class="pre">:</span> <span class="pre">List</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.ModelConfig.label_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="src.conf.config.OakDConfig">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">src.conf.config.</span></span><span class="sig-name descname"><span class="pre">OakDConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'oakd'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">left_mesh_fpath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right_mesh_fpath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right_map_x_fpath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right_map_y_fpath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">left_map_x_fpath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">left_map_y_fpath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_calib_fpath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interleaved_color_cam</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_depth_stereo</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thres_conf_stereo</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thres_conf_spatial</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blocking_spatial</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bb_scale_factor_spatial</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">depth_low_thres_spatial</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">depth_high_thres_spatial</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_queue_blocking</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_queue_max_size</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_depth</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">syncnn</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">full_frame_tracking</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.conf.config.OakDConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#src.conf.config.CalibConfig" title="src.conf.config.CalibConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.conf.config.CalibConfig</span></code></a></p>
+<p>Loads the <code class="docutils literal notranslate"><span class="pre">oakd</span></code> camera config</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.OakDConfig.base_depth">
+<span class="sig-name descname"><span class="pre">base_depth</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.OakDConfig.base_depth" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.OakDConfig.bb_scale_factor_spatial">
+<span class="sig-name descname"><span class="pre">bb_scale_factor_spatial</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.OakDConfig.bb_scale_factor_spatial" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.OakDConfig.blocking_spatial">
+<span class="sig-name descname"><span class="pre">blocking_spatial</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.OakDConfig.blocking_spatial" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.OakDConfig.custom_calib_fpath">
+<span class="sig-name descname"><span class="pre">custom_calib_fpath</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.OakDConfig.custom_calib_fpath" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.OakDConfig.depth_high_thres_spatial">
+<span class="sig-name descname"><span class="pre">depth_high_thres_spatial</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.OakDConfig.depth_high_thres_spatial" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.OakDConfig.depth_low_thres_spatial">
+<span class="sig-name descname"><span class="pre">depth_low_thres_spatial</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.OakDConfig.depth_low_thres_spatial" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.OakDConfig.driver">
+<span class="sig-name descname"><span class="pre">driver</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'oakd'</span></em><a class="headerlink" href="#src.conf.config.OakDConfig.driver" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.OakDConfig.full_frame_tracking">
+<span class="sig-name descname"><span class="pre">full_frame_tracking</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.OakDConfig.full_frame_tracking" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.OakDConfig.interleaved_color_cam">
+<span class="sig-name descname"><span class="pre">interleaved_color_cam</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.OakDConfig.interleaved_color_cam" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.OakDConfig.out_queue_blocking">
+<span class="sig-name descname"><span class="pre">out_queue_blocking</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.OakDConfig.out_queue_blocking" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.OakDConfig.out_queue_max_size">
+<span class="sig-name descname"><span class="pre">out_queue_max_size</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.OakDConfig.out_queue_max_size" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.OakDConfig.output_depth_stereo">
+<span class="sig-name descname"><span class="pre">output_depth_stereo</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.OakDConfig.output_depth_stereo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.OakDConfig.syncnn">
+<span class="sig-name descname"><span class="pre">syncnn</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.OakDConfig.syncnn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.OakDConfig.thres_conf_spatial">
+<span class="sig-name descname"><span class="pre">thres_conf_spatial</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.OakDConfig.thres_conf_spatial" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.OakDConfig.thres_conf_stereo">
+<span class="sig-name descname"><span class="pre">thres_conf_stereo</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.OakDConfig.thres_conf_stereo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="src.conf.config.ProdDbConfig">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">src.conf.config.</span></span><span class="sig-name descname"><span class="pre">ProdDbConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'prod_db'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_calib_fpath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.conf.config.ProdDbConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#src.conf.config.DbConfig" title="src.conf.config.DbConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.conf.config.DbConfig</span></code></a></p>
+<p>Loads <code class="docutils literal notranslate"><span class="pre">prod_db</span></code> DB config</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.ProdDbConfig.custom_calib_fpath">
+<span class="sig-name descname"><span class="pre">custom_calib_fpath</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.ProdDbConfig.custom_calib_fpath" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.ProdDbConfig.driver">
+<span class="sig-name descname"><span class="pre">driver</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'prod_db'</span></em><a class="headerlink" href="#src.conf.config.ProdDbConfig.driver" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="src.conf.config.QaDbConfig">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">src.conf.config.</span></span><span class="sig-name descname"><span class="pre">QaDbConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'qa_db'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">img_class_fpath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwrite_fpath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.conf.config.QaDbConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#src.conf.config.DbConfig" title="src.conf.config.DbConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.conf.config.DbConfig</span></code></a></p>
+<p>Loads <code class="docutils literal notranslate"><span class="pre">qa_db</span></code> DB config</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.QaDbConfig.driver">
+<span class="sig-name descname"><span class="pre">driver</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'qa_db'</span></em><a class="headerlink" href="#src.conf.config.QaDbConfig.driver" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.QaDbConfig.fwrite_fpath">
+<span class="sig-name descname"><span class="pre">fwrite_fpath</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.QaDbConfig.fwrite_fpath" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.QaDbConfig.img_class_fpath">
+<span class="sig-name descname"><span class="pre">img_class_fpath</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.QaDbConfig.img_class_fpath" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="src.conf.config.StagingDbConfig">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">src.conf.config.</span></span><span class="sig-name descname"><span class="pre">StagingDbConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'stag_db'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_calib_fpath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'???'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.conf.config.StagingDbConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#src.conf.config.DbConfig" title="src.conf.config.DbConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.conf.config.DbConfig</span></code></a></p>
+<p>Loads <code class="docutils literal notranslate"><span class="pre">stag_db</span></code> DB config</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.StagingDbConfig.custom_calib_fpath">
+<span class="sig-name descname"><span class="pre">custom_calib_fpath</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'???'</span></em><a class="headerlink" href="#src.conf.config.StagingDbConfig.custom_calib_fpath" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.conf.config.StagingDbConfig.driver">
+<span class="sig-name descname"><span class="pre">driver</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'stag_db'</span></em><a class="headerlink" href="#src.conf.config.StagingDbConfig.driver" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.conf.config.load_config">
+<span class="sig-prename descclassname"><span class="pre">src.conf.config.</span></span><span class="sig-name descname"><span class="pre">load_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cfg</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#src.conf.config.Config" title="src.conf.config.Config"><span class="pre">src.conf.config.Config</span></a></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#src.conf.config.load_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads the OmegaConf's Structured Configs via the <code class="docutils literal notranslate"><span class="pre">ConfigStore</span></code>
+API configuration file.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>More information about <a class="reference external" href="https://omegaconf.readthedocs.io/en/latest/structured_config.html">OmegaConf's structured config</a></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>cfg</strong> (<a class="reference internal" href="#src.conf.config.Config" title="src.conf.config.Config"><em>Config</em></a>) -- Manages structured config</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="src.core.html" class="btn btn-neutral float-left" title="DepthAI Core" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Elakkiya.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

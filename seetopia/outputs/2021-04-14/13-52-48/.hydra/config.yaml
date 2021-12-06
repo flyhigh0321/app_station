@@ -1,0 +1,55 @@
+model:
+  driver: mobilenetssd
+  label_map:
+  - background
+  - greenmat
+  - object
+  blob_fpath: resources/nn/mobilenet-ssd/mobilenet-ssd.blob
+  blob_config_fpath: resources/nn/mobilenet-ssd/mobilenet-ssd.json
+  input_size_x: 300
+  input_size_y: 300
+calib:
+  driver: oakd
+  left_mesh_fpath: resources/calib/mesh_left.calib
+  right_mesh_fpath: resources/calib/mesh_right.calib
+  right_map_x_fpath: resources/calib/map_x_right.calib
+  right_map_y_fpath: resources/calib/map_y_right.calib
+  left_map_x_fpath: resources/calib/map_x_left.calib
+  left_map_y_fpath: resources/calib/map_y_left.calib
+  custom_calib_fpath: resources/default.calib
+  interleaved_color_cam: false
+  output_depth_stereo: true
+  thres_conf_stereo: 255
+  thres_conf_spatial: 0.5
+  blocking_spatial: false
+  bb_scale_factor_spatial: 0.5
+  depth_low_thres_spatial: 100
+  depth_high_thres_spatial: 5000
+  out_queue_blocking: false
+  out_queue_max_size: 4
+  base_depth: 63
+  syncnn: true
+db:
+  driver: qa_db
+  img_class_fpath: resources/classification_db/oak_images
+  fwrite_fpath: resources/classification_db/oak_images
+cv:
+  driver: cv_default
+  resize_window_min: 640
+  resize_window_max: 160
+  area_min: 311
+  area_max: 30000
+  thres_min: 57
+  thres_max: 41
+  thres_limit: 255
+  scale_factor_x: 0.58
+  scale_factor_y: 0.58
+  kernel_gauss: 7
+  iter_gauss: 1
+  kernel_dilate: 5
+  iter_dilate: 1
+  r_color: 255
+  g_color: 255
+  b_color: 255
+  display: true
+  debug: true

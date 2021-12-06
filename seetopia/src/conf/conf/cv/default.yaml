@@ -1,0 +1,19 @@
+driver: cv_default
+resize_window_min: 640
+resize_window_max: 160
+area_min: 3727
+area_max: 30000
+thres_min: 59
+thres_max: 50 #50
+thres_limit: 255
+scale_factor_x: 0.92
+scale_factor_y: 0.92
+kernel_gauss: 7
+iter_gauss: 1
+kernel_dilate: 5
+iter_dilate: 1
+r_color: 255
+g_color: 255
+b_color: 255
+display: True
+debug: True

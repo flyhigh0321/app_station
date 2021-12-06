@@ -1,0 +1,509 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="python" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Kivy QAApp &mdash; QA App Station 0.0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Utils" href="src.utils.html" />
+    <link rel="prev" title="QA App Station (Kivy) package" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> QA App Station
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="readme.html">SEETopia AI Workstation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html#python-modules-dependencies">Python modules (Dependencies)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html#installing-qa-app">Installing QA APP</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">QA App Station (Kivy) package</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Kivy QAApp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="src.utils.html">Utils</a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.ui.html">Kivy UI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.core.html">DepthAI Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.conf.html">Hydra Configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">QA App Station</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">QA App Station (Kivy) package</a> &raquo;</li>
+        
+      <li>Kivy QAApp</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/src.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="module-src"></span><dl class="py function">
+<dt class="sig sig-object py" id="src.main">
+<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.main" title="Permalink to this definition">¶</a></dt>
+<dd><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please watch the demo of <a class="reference external" href="https://drive.google.com/file/d/1A3jBE7nzir5S63-y1cDki4LhMiRuUxPx/view?usp=sharing">QAApp</a></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If pyinstaller path attribution is created, then add it to the
+resource path which will update the absolute path to the bundle
+folder.</p>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">resource_add_path</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">_MEIPASS</span><span class="p">))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<div class="section" id="module-src.qa_app_demo">
+<span id="kivy-qaapp"></span><h1>Kivy QAApp<a class="headerlink" href="#module-src.qa_app_demo" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.qa_app_demo.QAApp">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">src.qa_app_demo.</span></span><span class="sig-name descname"><span class="pre">QAApp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.qa_app_demo.QAApp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">kivymd.app.MDApp</span></code></p>
+<blockquote>
+<div><p>This is an instance of <a class="reference external" href="https://kivymd.readthedocs.io/en/latest/themes/material-app/index.html#kivymd.app.MDApp">MDApp</a> class and it is used to create and run the kivy application's life cycle.</p>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please refer to <code class="docutils literal notranslate"><span class="pre">help(QAApp)</span></code> to know more.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>MDApp</strong> (<a class="reference external" href="https://kivy.org/doc/stable/api-kivy.app.html#kivy.app.App">App</a>) -- It is inherited from Kivy
+<a class="reference external" href="https://kivy.org/doc/stable/api-kivy.app.html#kivy.app.App">App</a> class</p></li>
+<li><p><strong>flag</strong> (<em>boolean</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> if an item is flagged for further investigation
+<code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise. Typically triggered from the <a class="reference internal" href="src.ui.screens.html#src.ui.screens.dashboard.DashBoard" title="src.ui.screens.dashboard.DashBoard"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.ui.screens.dashboard.DashBoard</span></code></a> screen.</p></li>
+<li><p><strong>start_qa</strong> (<em>boolean</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> if a new transfer id is searched / barcode is scanned
+<code class="docutils literal notranslate"><span class="pre">False</span></code> if QA is completed or on page refresh
+Usually by clicking the &quot;Done&quot; or &quot;Back&quot; buttons in the <a class="reference internal" href="src.ui.screens.html#src.ui.screens.dashboard.DashBoard" title="src.ui.screens.dashboard.DashBoard"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.ui.screens.dashboard.DashBoard</span></code></a> screen.</p></li>
+<li><p><strong>session_state</strong> (<em>boolean</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> if a user logs in
+<code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p></li>
+<li><p><strong>update_dimension</strong> (<em>boolean</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> if update dimensions are required from OAK pipeline
+<code class="docutils literal notranslate"><span class="pre">False</span></code> once the user navigates to the <a class="reference internal" href="#src.qa_app_demo.QAApp.show_override_popup" title="src.qa_app_demo.QAApp.show_override_popup"><code class="xref py py-func docutils literal notranslate"><span class="pre">show_override_popup()</span></code></a>.</p></li>
+<li><p><strong>barcodeData</strong> (<em>str</em>) -- Decoded barcode data.
+Currently, it supports a single barcode decoding and can be extended for multiple barcodes.
+Futuristic data type can be a array of strings for multiple barcode decoding.</p></li>
+<li><p><strong>master_data</strong> (<em>dict</em>) -- Json WMS response speicfic to a <code class="docutils literal notranslate"><span class="pre">transfer</span> <span class="pre">id</span></code>.</p></li>
+<li><p><strong>dimension</strong> (<em>dict</em>) -- Measured dimensions (length, width, height) from OAk.</p></li>
+<li><p><strong>override_master_data</strong> (<em>dict</em>) -- Updated master data (length, width, height,weight, quantity)</p></li>
+<li><p><strong>window_size</strong> (<em>tuple</em>) -- Size of the kivy window</p></li>
+<li><p><strong>window_w</strong> (<em>int</em>) -- Width of current kivy window</p></li>
+<li><p><strong>window_h</strong> (<em>int</em>) -- Height of current kivy window</p></li>
+<li><p><strong>_keyboard_press</strong> (<em>int</em>) -- Private variable to capture the key press ids</p></li>
+<li><p><strong>oak</strong> (<a class="reference internal" href="src.core.html#src.core.oak_pipeline.OakPipeline" title="src.core.oak_pipeline.OakPipeline"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.core.oak_pipeline.OakPipeline</span></code></a>) -- instance of <a class="reference internal" href="src.core.html#src.core.oak_pipeline.OakPipeline" title="src.core.oak_pipeline.OakPipeline"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.core.oak_pipeline.OakPipeline</span></code></a></p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.qa_app_demo.QAApp.__display_frame">
+<span class="sig-name descname"><span class="pre">__display_frame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.qa_app_demo.QAApp.__display_frame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new texture in the current page corresponding to
+the size of the processed CV frame and convert it to a byte stream.
+Replace the texture of the <cite>vid</cite> widget of the curernt screen.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>frame</strong> (<em>np array</em>) -- processed cv frame to be streamed</p></li>
+<li><p><strong>dt</strong> (<em>float</em>) -- Refers to delta-time, which is the elapsed time between the
+scheduling and the callback</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.qa_app_demo.QAApp.__keydown">
+<span class="sig-name descname"><span class="pre">__keydown</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.qa_app_demo.QAApp.__keydown" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fired when a new key is pressed down on a
+keybaord binded to the current window</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.qa_app_demo.QAApp.__show_dashboard">
+<span class="sig-name descname"><span class="pre">__show_dashboard</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.qa_app_demo.QAApp.__show_dashboard" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the <code class="docutils literal notranslate"><span class="pre">measure</span></code> widget (labels and text fields) in the
+<a class="reference internal" href="src.ui.screens.html#src.ui.screens.dashboard.DashBoard" title="src.ui.screens.dashboard.DashBoard"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.ui.screens.dashboard.DashBoard</span></code></a> screen by triggering the
+<a class="reference internal" href="src.ui.screens.html#src.ui.screens.dashboard.DashBoard.check_measurements" title="src.ui.screens.dashboard.DashBoard.check_measurements"><code class="xref py py-func docutils literal notranslate"><span class="pre">src.ui.screens.dashboard.DashBoard.check_measurements()</span></code></a> method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dt</strong> (<em>float</em>) -- Refers to delta-time for scheduled call back.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.qa_app_demo.QAApp.__start_pipeline">
+<span class="sig-name descname"><span class="pre">__start_pipeline</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.qa_app_demo.QAApp.__start_pipeline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configure the <code class="docutils literal notranslate"><span class="pre">color_Cam</span></code>, <code class="docutils literal notranslate"><span class="pre">nn</span></code>, <code class="docutils literal notranslate"><span class="pre">stereo</span></code>, <code class="docutils literal notranslate"><span class="pre">mono_left</span></code> and <code class="docutils literal notranslate"><span class="pre">mono_right</span></code> nodes.
+Starts the depthai pipeline and process the streaming data from OAK cam.
+Receives the <code class="docutils literal notranslate"><span class="pre">preview</span></code>, <code class="docutils literal notranslate"><span class="pre">detection</span></code> queue and streams the processed frame.
+Decodes the barcode captured in the <code class="docutils literal notranslate"><span class="pre">CvFrame</span></code> and updates the <code class="docutils literal notranslate"><span class="pre">barcodeData</span></code>
+and <code class="docutils literal notranslate"><span class="pre">dimension</span></code> attributes.</p>
+<p>If the <code class="docutils literal notranslate"><span class="pre">session_state</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code> and when the decoded <code class="docutils literal notranslate"><span class="pre">barcodeData</span></code> is
+available, it triggers the aaaa
+method to initiate the QA.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.qa_app_demo.QAApp.__update_dashboard_ids">
+<span class="sig-name descname"><span class="pre">__update_dashboard_ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.qa_app_demo.QAApp.__update_dashboard_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the text and label ids in the <a class="reference internal" href="src.ui.screens.html#src.ui.screens.dashboard.DashBoard" title="src.ui.screens.dashboard.DashBoard"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.ui.screens.dashboard.DashBoard</span></code></a>.
+Scheduled function calls with default values are made using
+<a class="reference external" href="https://docs.python.org/3/library/functools.html#functools.partial">functools.partial</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dt</strong> (<em>float</em>) -- Refers to delta-time, which is the elapsed time between the
+scheduling and the callback</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.qa_app_demo.QAApp.__update_search_page_ids">
+<span class="sig-name descname"><span class="pre">__update_search_page_ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.qa_app_demo.QAApp.__update_search_page_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the widget ids in the <a class="reference internal" href="src.ui.screens.html#src.ui.screens.dashboard.DashBoard" title="src.ui.screens.dashboard.DashBoard"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.ui.screens.dashboard.DashBoard</span></code></a>.
+Scheduled function calls with default values are made using
+<a class="reference external" href="https://docs.python.org/3/library/functools.html#functools.partial">functools.partial</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dt</strong> (<em>float</em>) -- Refers to delta-time, which is the elapsed time between the
+scheduling and the callback</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.qa_app_demo.QAApp.__update_window_size">
+<span class="sig-name descname"><span class="pre">__update_window_size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.qa_app_demo.QAApp.__update_window_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates class variables with the lastest window size</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.qa_app_demo.QAApp.build">
+<span class="sig-name descname"><span class="pre">build</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.qa_app_demo.QAApp.build" title="Permalink to this definition">¶</a></dt>
+<dd><p>Builds a <cite>parser</cite> for parsing the main <cite>kv</cite> file by using the global kivy
+<a href="#id1"><span class="problematic" id="id2">:builder:`Builder &lt;&gt;`</span></a> instance.
+Creates a <a class="reference external" href="https://kivy.org/doc/stable/api-kivy.uix.screenmanager.html">Screenmanager</a> and adds the
+<a class="reference internal" href="src.ui.screens.html#src.ui.screens.main_window.MainWindow" title="src.ui.screens.main_window.MainWindow"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.ui.screens.main_window.MainWindow</span></code></a>,
+<a class="reference internal" href="src.ui.screens.html#src.ui.screens.search_page.SearchPage" title="src.ui.screens.search_page.SearchPage"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.ui.screens.search_page.SearchPage</span></code></a> and
+<a class="reference internal" href="src.ui.screens.html#src.ui.screens.dashboard.DashBoard" title="src.ui.screens.dashboard.DashBoard"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.ui.screens.dashboard.DashBoard</span></code></a> objects to the
+main <cite>root</cite> widget.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The standard <code class="docutils literal notranslate"><span class="pre">theme_cls</span></code> inherited from <a class="reference external" href="https://kivymd.readthedocs.io/en/latest/themes/material-app/index.html#kivymd.app.MDApp">MDApp</a> is designed to provide the standard themes
+and colors as defined by Material Design.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="bp">self</span><span class="o">.</span><span class="n">theme_cls</span><span class="o">.</span><span class="n">primary_palette</span> <span class="o">=</span> <span class="s2">&quot;Teal&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="bp">self</span><span class="o">.</span><span class="n">theme_cls</span><span class="o">.</span><span class="n">primary_hue</span> <span class="o">=</span> <span class="s2">&quot;500&quot;</span>
+</pre></div>
+</div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Returns the root layout of the main kivy app</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>kv layout</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.qa_app_demo.QAApp.clear_measure_widget">
+<span class="sig-name descname"><span class="pre">clear_measure_widget</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.qa_app_demo.QAApp.clear_measure_widget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the values of the <code class="docutils literal notranslate"><span class="pre">measure</span></code> widget by calling
+<a class="reference internal" href="src.ui.screens.html#src.ui.screens.dashboard.DashBoard.reset_measure_widget" title="src.ui.screens.dashboard.DashBoard.reset_measure_widget"><code class="xref py py-func docutils literal notranslate"><span class="pre">src.ui.screens.dashboard.DashBoard.reset_measure_widget()</span></code></a> method</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.qa_app_demo.QAApp.clear_search_text">
+<span class="sig-name descname"><span class="pre">clear_search_text</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.qa_app_demo.QAApp.clear_search_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets the <code class="docutils literal notranslate"><span class="pre">search</span></code> widget by calling
+<a class="reference internal" href="#src.qa_app_demo.QAApp.clear_search_text" title="src.qa_app_demo.QAApp.clear_search_text"><code class="xref py py-func docutils literal notranslate"><span class="pre">clear_search_text()</span></code></a> method</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.qa_app_demo.QAApp.clear_states">
+<span class="sig-name descname"><span class="pre">clear_states</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.qa_app_demo.QAApp.clear_states" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flushes out the states set during the QA process</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.qa_app_demo.QAApp.clear_weight_widget">
+<span class="sig-name descname"><span class="pre">clear_weight_widget</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.qa_app_demo.QAApp.clear_weight_widget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the values of the <code class="docutils literal notranslate"><span class="pre">weight</span></code> widget by calling
+<a class="reference internal" href="src.ui.screens.html#src.ui.screens.dashboard.DashBoard.update_widgets" title="src.ui.screens.dashboard.DashBoard.update_widgets"><code class="xref py py-func docutils literal notranslate"><span class="pre">src.ui.screens.dashboard.DashBoard.update_widgets()</span></code></a> method</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.qa_app_demo.QAApp.confirm_override">
+<span class="sig-name descname"><span class="pre">confirm_override</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.qa_app_demo.QAApp.confirm_override" title="Permalink to this definition">¶</a></dt>
+<dd><p>Submits the updated values to WMS internally by
+triggering <a class="reference internal" href="src.ui.screens.html#src.ui.screens.dashboard.DashBoard.confirm_override" title="src.ui.screens.dashboard.DashBoard.confirm_override"><code class="xref py py-func docutils literal notranslate"><span class="pre">src.ui.screens.dashboard.DashBoard.confirm_override()</span></code></a> method</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.qa_app_demo.QAApp.flag_transfer">
+<span class="sig-name descname"><span class="pre">flag_transfer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.qa_app_demo.QAApp.flag_transfer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the state of the <code class="docutils literal notranslate"><span class="pre">flag</span></code> attribute</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.qa_app_demo.QAApp.login_keydown">
+<span class="sig-name descname"><span class="pre">login_keydown</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.qa_app_demo.QAApp.login_keydown" title="Permalink to this definition">¶</a></dt>
+<dd><p>Detects the <code class="docutils literal notranslate"><span class="pre">Enter</span></code> key press and triggers <a class="reference internal" href="#src.qa_app_demo.QAApp.user_authenticate" title="src.qa_app_demo.QAApp.user_authenticate"><code class="xref py py-func docutils literal notranslate"><span class="pre">user_authenticate()</span></code></a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.qa_app_demo.QAApp.popup_dismiss">
+<span class="sig-name descname"><span class="pre">popup_dismiss</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.qa_app_demo.QAApp.popup_dismiss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dismiss popup in <a class="reference internal" href="src.ui.screens.html#src.ui.screens.search_page.SearchPage" title="src.ui.screens.search_page.SearchPage"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.ui.screens.search_page.SearchPage</span></code></a> and
+<a class="reference internal" href="src.ui.screens.html#src.ui.screens.dashboard.DashBoard" title="src.ui.screens.dashboard.DashBoard"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.ui.screens.dashboard.DashBoard</span></code></a> screens</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.qa_app_demo.QAApp.rail_open">
+<span class="sig-name descname"><span class="pre">rail_open</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.qa_app_demo.QAApp.rail_open" title="Permalink to this definition">¶</a></dt>
+<dd><p>Opens/closes the navigation rail by updating its state to close/open</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.qa_app_demo.QAApp.search_transfer">
+<span class="sig-name descname"><span class="pre">search_transfer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.qa_app_demo.QAApp.search_transfer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Redirects the search request to <a class="reference internal" href="src.ui.screens.html#src.ui.screens.search_page.SearchPage" title="src.ui.screens.search_page.SearchPage"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.ui.screens.search_page.SearchPage</span></code></a>
+screen. On successful search, <code class="docutils literal notranslate"><span class="pre">start_qa</span></code>, <code class="docutils literal notranslate"><span class="pre">transfer_ID</span></code> and <code class="docutils literal notranslate"><span class="pre">master_data</span></code>
+attributes are updated. Otherwise left with the defualt values.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.qa_app_demo.QAApp.show_override_popup">
+<span class="sig-name descname"><span class="pre">show_override_popup</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.qa_app_demo.QAApp.show_override_popup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Displays the override confirmation popup
+by triggering the
+<a class="reference internal" href="src.ui.screens.html#src.ui.screens.dashboard.DashBoard.get_updated_measurements" title="src.ui.screens.dashboard.DashBoard.get_updated_measurements"><code class="xref py py-func docutils literal notranslate"><span class="pre">src.ui.screens.dashboard.DashBoard.get_updated_measurements()</span></code></a> method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.qa_app_demo.QAApp.user_authenticate">
+<span class="sig-name descname"><span class="pre">user_authenticate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.qa_app_demo.QAApp.user_authenticate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Captures the <cite>user name</cite> entered by the user from the
+<a class="reference internal" href="src.ui.screens.html#src.ui.screens.main_window.MainWindow" title="src.ui.screens.main_window.MainWindow"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.ui.screens.main_window.MainWindow</span></code></a> screen and
+triggers the <a class="reference internal" href="#src.qa_app_demo.QAApp.user_authenticate" title="src.qa_app_demo.QAApp.user_authenticate"><code class="xref py py-func docutils literal notranslate"><span class="pre">user_authenticate()</span></code></a>
+method for authentication</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="subpackages">
+<h1>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="src.utils.html">Utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="src.ui.html">Kivy UI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="src.ui.html#screens">Screens</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="src.ui.screens.html">Main Screen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.ui.screens.html#module-src.ui.screens.dashboard">Dashboard Screen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.ui.screens.html#module-src.ui.screens.search_page">Search screen</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="src.ui.html#widgets">Widgets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="src.ui.widgets.html">Custom popup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.ui.widgets.html#module-src.ui.widgets.custom_input_field">Custom input field</a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.ui.widgets.html#module-src.ui.widgets.custom_snack_bar">Custom snack bar</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="src.core.html">DepthAI Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="src.conf.html">Hydra Configuration</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="src.utils.html" class="btn btn-neutral float-right" title="Utils" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="modules.html" class="btn btn-neutral float-left" title="QA App Station (Kivy) package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Elakkiya.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

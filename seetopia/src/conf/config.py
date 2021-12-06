@@ -4,7 +4,7 @@ import hydra
 from hydra.core.config_store import ConfigStore
 from hydra.experimental import compose, initialize
 from omegaconf import MISSING, OmegaConf
-from utils import utils  # ..
+from ..utils import utils  # ..
 from dataclasses import dataclass
 from typing import List
 
@@ -206,7 +206,8 @@ cs.store(
     node=StagingDbConfig,
     package="db",
 )
-cs.store(group="schema/cv", name="cv_default", node=CvDefaultConfig, package="cv")
+cs.store(group="schema/cv", name="cv_default",
+         node=CvDefaultConfig, package="cv")
 cs.store(
     group="schema/cv",
     name="cv_custom_001",

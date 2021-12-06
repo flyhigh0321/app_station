@@ -3,8 +3,8 @@ import sys
 import numpy as np
 import depthai as dai
 from pyzbar import pyzbar
-from utils import utils  # ..
-from conf import config  # ..
+from ..utils import utils  # ..
+from ..conf import config  # ..
 
 cfg = config.cfg
 
@@ -125,7 +125,8 @@ class OakPipeline:
             Updated depthai nodes and links in the form of a pipeline
         """
         nodes.cam_rgb = pipeline.createColorCamera()
-        nodes.cam_rgb.setPreviewSize(cfg.model.input_size_x, cfg.model.input_size_y)
+        nodes.cam_rgb.setPreviewSize(
+            cfg.model.input_size_x, cfg.model.input_size_y)
         nodes.cam_rgb.setResolution(
             dai.ColorCameraProperties.SensorResolution.THE_1080_P
         )
@@ -200,10 +201,12 @@ class OakPipeline:
         """
         if self.nn_family == "mobilenet":
             nodes.nn = pipeline.createMobileNetSpatialDetectionNetwork()
-            nodes.nn.setBlobPath(utils.relative_to_abs_path(cfg.model.blob_fpath))
+            nodes.nn.setBlobPath(
+                utils.relative_to_abs_path(cfg.model.blob_fpath))
             nodes.nn.setConfidenceThreshold(cfg.calib.thres_conf_spatial)
             nodes.nn.input.setBlocking(cfg.calib.blocking_spatial)
-            nodes.nn.setBoundingBoxScaleFactor(cfg.calib.bb_scale_factor_spatial)
+            nodes.nn.setBoundingBoxScaleFactor(
+                cfg.calib.bb_scale_factor_spatial)
             nodes.nn.setDepthLowerThreshold(cfg.calib.depth_low_thres_spatial)
             nodes.nn.setDepthUpperThreshold(cfg.calib.depth_high_thres_spatial)
 

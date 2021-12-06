@@ -6,12 +6,12 @@ from ..utils import utils as rp  # ..
 
 string = rp.relative_to_abs_path("../src/ui/screens/conf/dashboard.yaml")  # ..
 
-with io.open(string, "r") as stream:
-    """
-    Reads ``kv`` configurations form a ``.yaml`` file and loads
-    it to a  variable``
-    """
-    dashboard_conf = yaml.safe_load(stream)
+# with io.open(string, "r") as stream:
+#     """
+#     Reads ``kv`` configurations form a ``.yaml`` file and loads
+#     it to a  variable``
+#     """
+#     dashboard_conf = yaml.safe_load(stream)
 
 fields = {
     "width": "Width",

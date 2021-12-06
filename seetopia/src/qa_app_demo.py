@@ -1,9 +1,9 @@
-from ui.widgets.custom_snack_bar import CustomSnackbar
-from ui.widgets.custom_input_field import CustomInputField
-from ui.widgets.barcode_popup import BarcodePopup
-from ui.screens import dashboard as dashb
-from ui.screens import search_page as sp
-from ui.screens import main_window as mw
+from .ui.widgets.custom_snack_bar import CustomSnackbar
+from .ui.widgets.custom_input_field import CustomInputField
+from .ui.widgets.barcode_popup import BarcodePopup
+from .ui.screens import dashboard as dashb
+from .ui.screens import search_page as sp
+from .ui.screens import main_window as mw
 from core import oak_pipeline as op
 from utils import utils
 from conf import config

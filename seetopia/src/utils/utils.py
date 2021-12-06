@@ -533,7 +533,8 @@ def relative_to_abs_path(relative_path):
     """
     try:
         # return str(hy.to_absolute_path(Path(relative_path)))
-        return str(os.path.abspath("../../" + relative_path))
+        # return str(os.path.abspath("../../" + relative_path))
+        return str(os.path.abspath(relative_path))
     except FileNotFoundError:
         return None
 

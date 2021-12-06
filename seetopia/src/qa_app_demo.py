@@ -1,3 +1,29 @@
+from .ui.widgets.custom_snack_bar import CustomSnackbar
+from .ui.widgets.custom_input_field import CustomInputField
+from .ui.widgets.barcode_popup import BarcodePopup
+from .ui.screens import dashboard as dashb
+from .ui.screens import search_page as sp
+from .ui.screens import main_window as mw
+from .core import oak_pipeline as op
+from utils import utils
+from conf import config
+from functools import partial
+import depthai as dai
+import threading
+import sys
+from kivy.uix.screenmanager import Screen, ScreenManager
+from kivymd.uix.snackbar import BaseSnackbar
+from kivymd.uix.snackbar import Snackbar
+from kivymd.uix.textfield import MDTextField
+from kivymd.uix.label import MDLabel
+from kivymd.uix.button import MDFlatButton
+from kivymd.uix.dialog import MDDialog
+from kivymd.app import MDApp
+from kivy.resources import resource_add_path
+from kivy.graphics.texture import Texture
+from kivy.core.window import Window
+from kivy.lang import Builder
+from kivy.clock import Clock
 import os
 
 # os.environ["KIVY_NO_ARGS"] = "1"
@@ -9,43 +35,16 @@ Config.set("graphics", "minimum_width", "800")
 Config.set("graphics", "minimum_height", "600")
 
 # Kivy class object imports
-from kivy.clock import Clock
-from kivy.lang import Builder
-from kivy.core.window import Window
-from kivy.graphics.texture import Texture
-from kivy.resources import resource_add_path
 
 # Kivy MD property object imports
-from kivymd.app import MDApp
-from kivymd.uix.dialog import MDDialog
-from kivymd.uix.button import MDFlatButton
-from kivymd.uix.label import MDLabel
-from kivymd.uix.textfield import MDTextField
-from kivymd.uix.snackbar import Snackbar
-from kivymd.uix.snackbar import BaseSnackbar
-from kivy.uix.screenmanager import Screen, ScreenManager
 
 # Python modules
-import os
-import sys
-import threading
-import depthai as dai
-from functools import partial
 
 # Helper module imports
-from conf import config
-from utils import utils
 
 # from .utils import resource_paths as rp
-from core import oak_pipeline as op
 
 # Kivy custom screen,widgets imports
-from ui.screens import main_window as mw
-from ui.screens import search_page as sp
-from ui.screens import dashboard as dashb
-from ui.widgets.barcode_popup import BarcodePopup
-from ui.widgets.custom_input_field import CustomInputField
-from ui.widgets.custom_snack_bar import CustomSnackbar
 
 # Hydra configuration file initialisation
 cfg = config.cfg
@@ -141,7 +140,8 @@ class QAApp(MDApp):
             Refers to delta-time, which is the elapsed time between the
             scheduling and the callback
         """
-        texture = Texture.create(size=(frame.shape[1], frame.shape[0]), colorfmt="bgr")
+        texture = Texture.create(
+            size=(frame.shape[1], frame.shape[0]), colorfmt="bgr")
         texture.blit_buffer(
             frame.tobytes(order=None), colorfmt="bgr", bufferfmt="ubyte"
         )
@@ -206,14 +206,18 @@ class QAApp(MDApp):
         xout_rgb.setStreamName("rgb")
         xout_nn.setStreamName("detections")
         # Configure color_Cam node
-        color_cam.setPreviewSize(cfg.model.input_size_x, cfg.model.input_size_y)
-        color_cam.setResolution(dai.ColorCameraProperties.SensorResolution.THE_1080_P)
+        color_cam.setPreviewSize(
+            cfg.model.input_size_x, cfg.model.input_size_y)
+        color_cam.setResolution(
+            dai.ColorCameraProperties.SensorResolution.THE_1080_P)
         color_cam.setInterleaved(cfg.calib.interleaved_color_cam)
         color_cam.setColorOrder(dai.ColorCameraProperties.ColorOrder.BGR)
         # Configure mono cams
-        mono_left.setResolution(dai.MonoCameraProperties.SensorResolution.THE_400_P)
+        mono_left.setResolution(
+            dai.MonoCameraProperties.SensorResolution.THE_400_P)
         mono_left.setBoardSocket(dai.CameraBoardSocket.LEFT)
-        mono_right.setResolution(dai.MonoCameraProperties.SensorResolution.THE_400_P)
+        mono_right.setResolution(
+            dai.MonoCameraProperties.SensorResolution.THE_400_P)
         mono_right.setBoardSocket(dai.CameraBoardSocket.RIGHT)
         # setting node configs
         stereo.setOutputDepth(cfg.calib.output_depth_stereo)
@@ -262,7 +266,8 @@ class QAApp(MDApp):
                 detections = in_nn.detections
                 # Decode captured barcode from CV frame
                 self.barcodeData, barcodeType = self.oak.decode_barcode(frame)
-                img_contour, oak_dim = self.oak.draw_measurements(frame, detections)
+                img_contour, oak_dim = self.oak.draw_measurements(
+                    frame, detections)
                 Clock.schedule_once(partial(self._display_frame, img_contour))
                 if self.update_dimension:
                     self.dimension = oak_dim
@@ -331,12 +336,14 @@ class QAApp(MDApp):
         Clock.schedule_once(
             partial(
                 self.root.get_screen("menu").update_ids,
-                nxt_screen=self.root.get_screen("dashboard").ids.userWelcomeName,
+                nxt_screen=self.root.get_screen(
+                    "dashboard").ids.userWelcomeName,
                 root=self.root,
                 name_wid=self.root.get_screen("dashboard").ids.product_name,
                 sku_wid=self.root.get_screen("dashboard").ids.product_sku,
                 label_wid=self.root.get_screen("dashboard").ids.scan_status,
-                icon_wid=self.root.get_screen("dashboard").ids.scan_status_icon,
+                icon_wid=self.root.get_screen(
+                    "dashboard").ids.scan_status_icon,
             )
         )
 
@@ -377,7 +384,8 @@ class QAApp(MDApp):
         self.layout = Builder.load_file(kv)
         self.root = ScreenManager()
         self.root.add_widget(mw.MainWindow(name="login"))
-        self.root.add_widget(sp.SearchPage(name="menu"))  # change to search page
+        self.root.add_widget(sp.SearchPage(name="menu")
+                             )  # change to search page
         self.root.add_widget(dashb.DashBoard(name="dashboard"))
         Window.clearcolor = (0.9, 0.9, 0.9, 1)
         Clock.schedule_once(partial(self._update_search_page_ids))
@@ -456,7 +464,8 @@ class QAApp(MDApp):
         """Dismiss popup in :class:`src.ui.screens.search_page.SearchPage` and
         :class:`src.ui.screens.dashboard.DashBoard` screens"""
         current = self.root.current
-        Clock.schedule_once(partial(self.root.get_screen(current).popup_dismiss))
+        Clock.schedule_once(
+            partial(self.root.get_screen(current).popup_dismiss))
 
     def rail_open(self):
         """Opens/closes the navigation rail by updating its state to close/open"""
